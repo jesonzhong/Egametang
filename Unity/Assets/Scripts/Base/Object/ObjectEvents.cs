@@ -120,6 +120,11 @@ namespace Model
 				this.updates.Enqueue(disposer);
 			}
 
+			if (objectEvent is ILateUpdate)
+			{
+				this.lateUpdates.Enqueue(disposer);
+			}
+			
 			if (objectEvent is IStart)
 			{
 				this.starts.Enqueue(disposer);

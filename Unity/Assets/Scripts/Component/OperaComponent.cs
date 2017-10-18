@@ -29,7 +29,7 @@ namespace Model
 
         public void Update()
         {
-            if (Input.GetMouseButtonDown(1))
+            /*if (Input.GetMouseButtonDown(1))
             {
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
@@ -38,7 +38,13 @@ namespace Model
 					this.ClickPoint = hit.point;
 		            SessionComponent.Instance.Session.Send(new Frame_ClickMap() { X = (int)(this.ClickPoint.x * 1000), Z = (int)(this.ClickPoint.z * 1000) });
 				}
-            }
+            }*/
+	        
+	        Vector2 mInputVector = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+	        Vector2 direction = mInputVector;
+	        direction.Normalize();
+	        SessionComponent.Instance.Session.Send(new Frame_ClickMap() { X = (int)(direction.x * 1000), Z = (int)(direction.y * 1000) });
+	        
         }
     }
 }

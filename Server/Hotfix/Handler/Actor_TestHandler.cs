@@ -10,7 +10,7 @@ namespace Hotfix
 		{
 			Log.Debug(message.Info);
 
-			unit.GetComponent<UnitGateComponent>().GetActorProxy().Send(message);
+			//unit.GetComponent<UnitGateComponent>().GetActorProxy().Send(message);
 		}
 	}
 }

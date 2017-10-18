@@ -51,7 +51,7 @@ namespace Model
 
 		public bool hasDest;
 		public Vector3 Dest;
-
+		
 		public Vector3 MainSpeed
 		{
 			get
@@ -110,7 +110,7 @@ namespace Model
 				return;
 			}
 
-			Unit unit = this.GetEntity<Unit>();
+			/*Unit unit = this.GetEntity<Unit>();
 			Vector3 moveVector3 = this.Speed * Time.deltaTime;
 
 			if (this.hasDest)
@@ -124,7 +124,7 @@ namespace Model
 				}
 			}
 
-			unit.Position = unit.Position + moveVector3;
+			unit.Position = unit.Position + moveVector3;*/
 		}
 
 		private void UpdateTurn()
@@ -161,6 +161,13 @@ namespace Model
 			this.IsArrived = false;
 			this.hasDest = false;
 			this.MainSpeed = dir;
+			Unit unit = this.GetEntity<Unit>();
+			Vector3 moveTrans = dir * Time.deltaTime;
+			unit.Position += moveTrans;
+			Vector3 eulerAngles = unit.GameObject.transform.eulerAngles;
+			float mOrientation = Mathf.Atan2(moveTrans.x, moveTrans.z);
+			eulerAngles.y = mOrientation * Mathf.Rad2Deg;
+			unit.GameObject.transform.eulerAngles = eulerAngles;
 		}
 
 		public long AddSpeed(Vector3 spd)
