@@ -1,4 +1,4 @@
-// ·şÎñÆ÷Óë¿Í»§¶ËÖ®¼äµÄÏûÏ¢ Opcode´Ó1-9999
+// æœåŠ¡å™¨ä¸å®¢æˆ·ç«¯ä¹‹é—´çš„æ¶ˆæ¯ Opcodeä»1-9999
 
 using System.Collections.Generic;
 using ProtoBuf;
@@ -109,7 +109,7 @@ namespace Model
 		public AMessage Message;
 	}
 
-	// ·şÎñ¶Ë·¢¸ø¿Í»§¶Ë,Ã¿Ö¡Ò»Ìõ
+	// æœåŠ¡ç«¯å‘ç»™å®¢æˆ·ç«¯,æ¯å¸§ä¸€æ¡
 	[Message(Opcode.FrameMessage)]
 	public class FrameMessage : AActorMessage
 	{
@@ -117,7 +117,7 @@ namespace Model
 		public List<AFrameMessage> Messages = new List<AFrameMessage>();
 	}
 
-	// ¿Í»§¶Ëµã»÷µØÍ¼
+	// å®¢æˆ·ç«¯ç‚¹å‡»åœ°å›¾
 	[ProtoContract]
 	[Message(Opcode.Frame_ClickMap)]
 	public class Frame_ClickMap: AFrameMessage
