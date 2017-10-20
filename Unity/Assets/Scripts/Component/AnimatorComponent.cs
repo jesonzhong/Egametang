@@ -108,7 +108,14 @@ namespace Model
 			this.MontionSpeed = motionSpeed;
 		}
 
-		public void Play(MotionType motionType, float motionSpeed = 1f)
+        public void Play(string stateName)
+        {
+            if (this.Animator != null)
+            {
+                this.Animator.Play(stateName);
+            }
+        }
+        public void Play(MotionType motionType, float motionSpeed = 1f)
 		{
 			if (!this.HasParameter(motionType.ToString()))
 			{

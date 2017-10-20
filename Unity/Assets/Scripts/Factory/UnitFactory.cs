@@ -7,7 +7,7 @@ namespace Model
         public static Unit Create(long id)
         {
             UnitComponent unitComponent = Game.Scene.GetComponent<UnitComponent>();
-            GameObject prefab = ((GameObject) Resources.Load("Unit")).Get<GameObject>("Skeleton");
+            GameObject prefab = ((GameObject) Resources.Load("UnitAvatar")).Get<GameObject>("Skeleton");
             
 	        Unit unit = EntityFactory.CreateWithId<Unit>(id);
 	        unit.GameObject = UnityEngine.Object.Instantiate(prefab);

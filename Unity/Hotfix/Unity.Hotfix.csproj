@@ -35,6 +35,12 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\Library\ScriptAssemblies\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>D:\Working\Egametang\Unity\Library\ScriptAssemblies\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Threading, Version=1.0.2856.102, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -93,16 +99,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Handler\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Assembly-CSharp-firstpass.csproj">
-      <Project>{2662b409-6332-1e56-d797-c9025c53bdd6}</Project>
-      <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Assembly-CSharp.csproj">
-      <Project>{cd8c9303-404b-fb8d-6b9b-21988d5cac0a}</Project>
-      <Name>Assembly-CSharp</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

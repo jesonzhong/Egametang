@@ -47,7 +47,10 @@ namespace Model
 			if (this.Unit != null)
 			{
 				Vector3 cameraPos = this.mainCamera.transform.position;
-				this.mainCamera.transform.position = new Vector3(this.Unit.Position.x, cameraPos.y, this.Unit.Position.z - 1);
+                Vector3 targetPos = new Vector3(this.Unit.Position.x, cameraPos.y, this.Unit.Position.z - 4);
+
+                //相机位置
+                this.mainCamera.transform.position = Vector3.Lerp(cameraPos, targetPos, 3.0f * Time.deltaTime);
 			}
 		}
 	}

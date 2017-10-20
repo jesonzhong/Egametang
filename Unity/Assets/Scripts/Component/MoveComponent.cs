@@ -156,13 +156,13 @@ namespace Model
 			this.Dest = dest;
 		}
 
-		public void MoveToDir(Vector3 dir)
+		public void MoveToDir(Vector3 dir, float speedValue)
 		{
 			this.IsArrived = false;
 			this.hasDest = false;
-			this.MainSpeed = dir;
+			this.MainSpeed = dir.normalized * speedValue;
 			Unit unit = this.GetEntity<Unit>();
-			Vector3 moveTrans = dir * Time.deltaTime;
+			Vector3 moveTrans = this.MainSpeed * Time.deltaTime;
 			unit.Position += moveTrans;
 			Vector3 eulerAngles = unit.GameObject.transform.eulerAngles;
 			float mOrientation = Mathf.Atan2(moveTrans.x, moveTrans.z);
