@@ -43,7 +43,7 @@ namespace Hotfix
 				Log.Info("登陆gate成功!");
 
 				// 创建Player
-				Player player = Model.EntityFactory.CreateWithId<Player>(g2CLoginGate.PlayerId);
+				Player player = PlayerFactory.Create(g2CLoginGate.PlayerId);
 				PlayerComponent playerComponent = Game.Scene.GetComponent<PlayerComponent>();
 				playerComponent.MyPlayer = player;
 
