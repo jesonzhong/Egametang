@@ -5,5 +5,6 @@
         Root = 0,
         Login,
 		Lobby,
+        BattleMain,
     }
 }

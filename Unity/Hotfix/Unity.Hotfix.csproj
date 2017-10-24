@@ -35,6 +35,12 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\Library\ScriptAssemblies\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>..\Library\ScriptAssemblies\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Threading, Version=1.0.2856.102, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -83,6 +89,8 @@
     <Compile Include="Event\SessionRecvMessage_Dispatch.cs" />
     <Compile Include="Init.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\UIBattleMain\Component\UIBattleMainComponent.cs" />
+    <Compile Include="UI\UIBattleMain\Factory\UIBattleMainFactory.cs" />
     <Compile Include="UI\UILobby\Component\UILobbyComponent.cs" />
     <Compile Include="UI\UILobby\Factory\UILobbyFactory.cs" />
     <Compile Include="UI\UILogin\Component\UILoginComponent.cs" />
@@ -91,16 +99,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Handler\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Assembly-CSharp-firstpass.csproj">
-      <Project>{2662b409-6332-1e56-d797-c9025c53bdd6}</Project>
-      <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Assembly-CSharp.csproj">
-      <Project>{cd8c9303-404b-fb8d-6b9b-21988d5cac0a}</Project>
-      <Name>Assembly-CSharp</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -20,7 +20,7 @@ namespace Model
 	public sealed class Unit: Entity
 	{
 		public UnitType UnitType { get; private set; }
-
+        public int Level { get; set; }
 		public Vector3 Position { get; set; }
 		
 		public void Awake(UnitType unitType)
