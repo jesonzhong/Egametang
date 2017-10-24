@@ -558,6 +558,7 @@
     <Compile Include="Assets\Scripts\Component\SessionComponent.cs" />
     <Compile Include="Assets\Scripts\Component\TimerComponent.cs" />
     <Compile Include="Assets\Scripts\Component\UnitComponent.cs" />
+    <Compile Include="Assets\Scripts\Control\ControlStick.cs" />
     <Compile Include="Assets\Scripts\Entity\AssetBundleLoaderAsync.cs" />
     <Compile Include="Assets\Scripts\Entity\Config\BuffConfig.cs" />
     <Compile Include="Assets\Scripts\Entity\Config\UnitConfig.cs" />

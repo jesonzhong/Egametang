@@ -84,7 +84,8 @@ namespace Hotfix
 				G2C_EnterMap g2CEnterMap = await SessionComponent.Instance.Session.Call<G2C_EnterMap>(new C2G_EnterMap());
                 PlayerComponent.Instance.MyPlayer.UnitId = g2CEnterMap.UnitId;
                 Hotfix.Scene.GetComponent<UIComponent>().Remove(UIType.Lobby);
-			}
+                Hotfix.Scene.GetComponent<UIComponent>().Create(UIType.BattleMain);
+            }
 			catch (Exception e)
 			{
 				Log.Error(e.ToStr());
