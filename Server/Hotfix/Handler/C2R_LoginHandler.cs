@@ -17,7 +17,7 @@ namespace Hotfix
 				//	reply(response);
 				//	return;
 				//}
-
+                
 				// 随机分配一个Gate
 				StartConfig config = Game.Scene.GetComponent<RealmGateAddressComponent>().GetAddress();
 				//Log.Debug($"gate address: {MongoHelper.ToJson(config)}");

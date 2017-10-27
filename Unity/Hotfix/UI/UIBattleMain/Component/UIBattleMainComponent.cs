@@ -6,11 +6,16 @@ using UnityEngine.UI;
 namespace Hotfix
 {
 	[ObjectEvent]
-	public class UIBattleMainComponentEvent : ObjectEvent<UIBattleMainComponent>, IAwake
+	public class UIBattleMainComponentEvent : ObjectEvent<UIBattleMainComponent>, IAwake,IUpdate
 	{
 		public void Awake()
 		{
 			this.Get().Awake();
+		}
+
+		public void Update()
+		{
+			this.Get().Update();
 		}
 	}
 	
@@ -22,7 +27,8 @@ namespace Hotfix
         private GameObject Skill1;
         private GameObject Skill2;
         private GameObject Skill3;
-
+		private GameObject Controller;
+		private ControlStick m_ControlStick;
         public void Awake()
 		{
 			ReferenceCollector rc = this.GetEntity<UI>().GameObject.GetComponent<ReferenceCollector>();
@@ -42,39 +48,52 @@ namespace Hotfix
             JoyStickBg = rc.Get<GameObject>("ControllerBG");
             JoyStickBtn = rc.Get<GameObject>("ControllerButton");
 
-        }
+			Controller = rc.Get<GameObject>("Controller");
 
-        public void PlayAnimation(string actName)
-        {
-            Unit unit = Game.Scene.GetComponent<UnitComponent>().Get(PlayerComponent.Instance.MyPlayer.UnitId);
-            var animatorComponent = unit.GetComponent<AnimatorComponent>();
-            if (animatorComponent != null)
-            {
-                animatorComponent.Play(actName);
-            }
-        }
+			m_ControlStick = Controller.GetComponent<ControlStick>();
+		}
 
-        public void OnCommonAttack()
+		public void Update()
+		{
+			m_ControlStick.LogicUpdate();
+		}
+
+		/*public void PlayAnimation(string actName)
+		{
+		    Unit unit = Game.Scene.GetComponent<UnitComponent>().Get(PlayerComponent.Instance.MyPlayer.UnitId);
+		    var animatorComponent = unit.GetComponent<AnimatorComponent>();
+		    if (animatorComponent != null)
+		    {
+		        animatorComponent.Play(actName);
+		    }
+		}*/
+
+		void ClickAction(int action)
+		{
+			SessionComponent.Instance.Session.Send( new Frame_ClickAction() { ActionID = action});
+		}
+
+		public void OnCommonAttack()
         {
             Log.Debug("OnCommonAttack");
-            PlayAnimation("attack_2");
+	        ClickAction(1000);
         }
 
         public void OnSkill1()
         {
-            PlayAnimation("skill_1");
+	        ClickAction(1001);
             Log.Debug("OnSkill1");
         }
 
         public void OnSkill2()
         {
-            PlayAnimation("skill_2");
+	        ClickAction(1002);
             Log.Debug("OnSkill2");
         }
 
         public void OnSkill3()
         {
-            PlayAnimation("powerattack_2");
+	        ClickAction(1003);
             Log.Debug("OnSkill3");
         }
 

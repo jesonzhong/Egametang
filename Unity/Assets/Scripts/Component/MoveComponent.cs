@@ -51,7 +51,6 @@ namespace Model
 
 		public bool hasDest;
 		public Vector3 Dest;
-		
 		public Vector3 MainSpeed
 		{
 			get
@@ -98,7 +97,7 @@ namespace Model
 
 		public void Update()
 		{
-			UpdateTurn();
+			//UpdateTurn();
 
 			if (this.IsArrived)
 			{
@@ -162,7 +161,7 @@ namespace Model
 			this.hasDest = false;
 			this.MainSpeed = dir.normalized * speedValue;
 			Unit unit = this.GetEntity<Unit>();
-			Vector3 moveTrans = this.MainSpeed * Time.deltaTime;
+			Vector3 moveTrans = this.MainSpeed * 0.01f;
 			unit.Position += moveTrans;
 			Vector3 eulerAngles = unit.GameObject.transform.eulerAngles;
 			float mOrientation = Mathf.Atan2(moveTrans.x, moveTrans.z);

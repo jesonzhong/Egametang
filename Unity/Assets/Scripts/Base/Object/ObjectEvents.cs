@@ -60,6 +60,8 @@ namespace Model
 		private EQueue<Disposer> lateUpdates = new EQueue<Disposer>();
 		private EQueue<Disposer> lateUpdates2 = new EQueue<Disposer>();
 
+		
+		
 		public static void Close()
 		{
 			instance = null;

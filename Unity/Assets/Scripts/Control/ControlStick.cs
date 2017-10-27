@@ -57,16 +57,16 @@ public class ControlStick : MonoBehaviour, IBeginDragHandler, IEndDragHandler, I
         {
             thumb.position = MousePos;
 
-            Debug.Log("SetTarget Pos");
+            //Debug.Log("SetTarget Pos");
         }
 
-        float length = JoyStickBtn.transform.localPosition.magnitude;
+        //float length = JoyStickBtn.transform.localPosition.magnitude;
 
-        Debug.Log("length: " + length);
-        if (length > 200)
-        {
-            JoyStickBtn.transform.localPosition = Vector3.ClampMagnitude(JoyStickBtn.transform.localPosition, 200);
-        }
+        //Debug.Log("length: " + length);
+        //if (length > 200)
+        //{
+            //JoyStickBtn.transform.localPosition = Vector3.ClampMagnitude(JoyStickBtn.transform.localPosition, 200);
+        //}
 
         positon = JoyStickBtn.transform.localPosition;
         positon = positon / mRadius * Mathf.InverseLerp(200, 2, 1);
@@ -76,10 +76,11 @@ public class ControlStick : MonoBehaviour, IBeginDragHandler, IEndDragHandler, I
 
         direction.x = movePosNorm.x;
         direction.y = movePosNorm.y;
+        
         direction.Normalize();
     }
 
-    void Update()
+    public void LogicUpdate()
     {
         if (isDragging)
         {

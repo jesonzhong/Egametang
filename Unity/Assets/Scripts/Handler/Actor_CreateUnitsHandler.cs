@@ -22,10 +22,9 @@ namespace Model
 				if (PlayerComponent.Instance.MyPlayer.UnitId == unit.Id)
 				{
 					Game.Scene.GetComponent<CameraComponent>().Unit = unit;
+					Game.Scene.AddComponent<OperaComponent>();
 				}
 			}
-
-			Game.Scene.AddComponent<OperaComponent>();
 		}
 	}
 }

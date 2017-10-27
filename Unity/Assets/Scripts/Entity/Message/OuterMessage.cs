@@ -127,6 +127,15 @@ namespace Model
 		[ProtoMember(2)]
 		public int Z;
 	}
+	
+	// 客户端点击动作
+	[ProtoContract]
+	[Message(Opcode.Frame_ClickAction)]
+	public class Frame_ClickAction: AFrameMessage
+	{
+		[ProtoMember(1)]
+		public int ActionID;
+	}
 
 	[Message(Opcode.C2M_Reload)]
 	public class C2M_Reload: ARequest

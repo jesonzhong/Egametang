@@ -812,6 +812,8 @@ MonoBehaviour:
   isDragging: 0
   JoyStickBackground: {fileID: 1645253862439316}
   JoyStickBtn: {fileID: 1710962738107996}
+  positon: {x: 0, y: 0}
+  direction: {x: 0, y: 0}
 --- !u!114 &114364483123550656
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1111,6 +1113,8 @@ MonoBehaviour:
     gameObject: {fileID: 1710962738107996}
   - key: ControllerBG
     gameObject: {fileID: 1645253862439316}
+  - key: Controller
+    gameObject: {fileID: 1419486056239900}
 --- !u!114 &114919274596636362
 MonoBehaviour:
   m_ObjectHideFlags: 1

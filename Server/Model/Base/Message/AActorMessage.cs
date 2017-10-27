@@ -29,7 +29,9 @@ namespace Model
 	[ProtoContract]
 	[ProtoInclude(30000, typeof(Frame_ClickMap))]
 	[BsonKnownTypes(typeof(Frame_ClickMap))]
-	public abstract class AFrameMessage : AActorMessage
+    [ProtoInclude(30000, typeof(Frame_ClickAction))]
+    [BsonKnownTypes(typeof(Frame_ClickAction))]
+    public abstract class AFrameMessage : AActorMessage
 	{
 		[ProtoMember(1)]
 		public long Id;

@@ -31,8 +31,11 @@ namespace Model
         {
  	        Vector2 mInputVector = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
 	        Vector2 direction = mInputVector;
-	        direction.Normalize();
-	        SessionComponent.Instance.Session.Send(new Frame_ClickMap() { X = (int)(direction.x * 1000), Z = (int)(direction.y * 1000) });
+	        if (direction.magnitude > 0)
+	        {
+		        direction.Normalize();
+		        SessionComponent.Instance.Session.Send(new Frame_ClickMap() { X = (int)(direction.x * 1000), Z = (int)(direction.y * 1000) });
+	        }
         }
     }
 }

@@ -9,9 +9,11 @@ namespace Model
 		{
 			Unit unit = Game.Scene.GetComponent<UnitComponent>().Get(message.Id);
 			MoveComponent moveComponent = unit.GetComponent<MoveComponent>();
-			Vector3 dest = new Vector3(message.X / 1000f,0,message.Z / 1000f);
-            //Log.Debug("Move dir: " + dest);
-			moveComponent.MoveToDir(dest, 3);
+			Vector3 dir = new Vector3(message.X / 1000f,0,message.Z / 1000f);
+			moveComponent.MoveToDir(dir, 10);
+
+			CameraComponent camComponent = Game.Scene.GetComponent<CameraComponent>();
+			camComponent.UpdatePosition();
 			//moveComponent.Turn2D(dest - unit.Position);
 		}
 	}
