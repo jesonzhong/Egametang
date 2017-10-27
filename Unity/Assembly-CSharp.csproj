@@ -118,7 +118,6 @@
     <Compile Include="Assets\Scripts\Base\EQueue.cs" />
     <Compile Include="Assets\Scripts\Base\Event\AEventAttribute.cs" />
     <Compile Include="Assets\Scripts\Base\Event\CrossEventAttribute.cs" />
-    <Compile Include="Assets\Scripts\Base\Event\CrossIdType.cs" />
     <Compile Include="Assets\Scripts\Base\Event\Env.cs" />
     <Compile Include="Assets\Scripts\Base\Event\EnvKey.cs" />
     <Compile Include="Assets\Scripts\Base\Event\EventAttribute.cs" />
@@ -231,7 +230,6 @@
     <Compile Include="Assets\Scripts\Component\Config\StartConfig.cs" />
     <Compile Include="Assets\Scripts\Component\Config\VersionConfig.cs" />
     <Compile Include="Assets\Scripts\Component\ConfigComponent.cs" />
-    <Compile Include="Assets\Scripts\Component\CrossComponent.cs" />
     <Compile Include="Assets\Scripts\Component\EventComponent.cs" />
     <Compile Include="Assets\Scripts\Component\FrameMessageComponent.cs" />
     <Compile Include="Assets\Scripts\Component\MessageDispatherComponent.cs" />
@@ -273,6 +271,7 @@
     <Compile Include="Assets\Scripts\Helper\GameObjectHelper.cs" />
     <Compile Include="Assets\Scripts\Helper\ILHelper.cs" />
     <Compile Include="Assets\Scripts\Helper\MongoHelper.cs" />
+    <Compile Include="Assets\Scripts\Helper\PathHelp.cs" />
     <Compile Include="Assets\Scripts\Helper\PositionHelper.cs" />
     <Compile Include="Assets\Scripts\Helper\ResourceHelper.cs" />
     <Compile Include="Assets\Scripts\Init.cs" />

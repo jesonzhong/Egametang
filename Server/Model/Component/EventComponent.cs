@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Model;
 
-namespace Hotfix
+namespace Model
 {
 	[ObjectEvent]
 	public class EventComponentEvent : ObjectEvent<EventComponent>, IAwake, ILoad
@@ -17,7 +16,7 @@ namespace Hotfix
 			this.Get().Load();
 		}
 	}
-	
+
 	public class EventComponent : Component
 	{
 		private Dictionary<EventIdType, List<object>> allEvents;
@@ -30,14 +29,15 @@ namespace Hotfix
 		public void Load()
 		{
 			this.allEvents = new Dictionary<EventIdType, List<object>>();
-			
-			Type[] types = DllHelper.GetHotfixTypes();
+
+			Type[] types = DllHelper.GetMonoTypes();
 			foreach (Type type in types)
 			{
 				object[] attrs = type.GetCustomAttributes(typeof(EventAttribute), false);
+
 				foreach (object attr in attrs)
-                {
-                    EventAttribute aEventAttribute = (EventAttribute)attr;
+				{
+					EventAttribute aEventAttribute = (EventAttribute)attr;
 					object obj = Activator.CreateInstance(type);
 					if (!this.allEvents.ContainsKey((EventIdType)aEventAttribute.Type))
 					{
@@ -64,7 +64,7 @@ namespace Hotfix
 				}
 				catch (Exception e)
 				{
-					Log.Error(e.ToStr());
+					Log.Error(e.ToString());
 				}
 			}
 		}
