@@ -97,6 +97,9 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>Assets/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="Debuger">
+      <HintPath>Assets/Plugins/Debuger.dll</HintPath>
+    </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>Assets/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>
     </Reference>
@@ -111,9 +114,6 @@
     </Reference>
     <Reference Include="NPOI.OpenXmlFormats">
       <HintPath>Assets/Plugins/npoi/NPOI.OpenXmlFormats.dll</HintPath>
-    </Reference>
-    <Reference Include="Debuger">
-      <HintPath>Assets/Plugins/Debuger.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -559,6 +559,7 @@
     <Compile Include="Assets\Scripts\Component\ConfigComponent.cs" />
     <Compile Include="Assets\Scripts\Component\CrossComponent.cs" />
     <Compile Include="Assets\Scripts\Component\EventComponent.cs" />
+    <Compile Include="Assets\Scripts\Component\HUDComponent.cs" />
     <Compile Include="Assets\Scripts\Component\MessageDispatherComponent.cs" />
     <Compile Include="Assets\Scripts\Component\MoveComponent.cs" />
     <Compile Include="Assets\Scripts\Component\NetOuterComponent.cs" />
@@ -605,7 +606,10 @@
     <Compile Include="Assets\Scripts\Init.cs" />
     <Compile Include="Assets\Scripts\Massive\ClientConfig.cs" />
     <Compile Include="Assets\Scripts\Massive\ServerConfig.cs" />
+    <Compile Include="Assets\Scripts\Massive\Slider3D.cs" />
     <Compile Include="Assets\Scripts\Massive\SysUtil.cs" />
+    <Compile Include="Assets\Scripts\Massive\UIBillboard.cs" />
+    <Compile Include="Assets\Scripts\Massive\UIUtil.cs" />
     <Compile Include="Assets\Scripts\MonoConfig\CanvasConfig.cs" />
     <Compile Include="Assets\Scripts\Other\Define.cs" />
     <Compile Include="Assets\Scripts\Other\IInstanceMethod.cs" />

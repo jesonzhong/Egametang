@@ -6,17 +6,18 @@ namespace Model
     {
         public static Unit Create(long id)
         {
-            UnitComponent unitComponent = Game.Scene.GetComponent<UnitComponent>();
-            GameObject prefab = ((GameObject) Resources.Load("UnitAvatar")).Get<GameObject>("Skeleton");
-            
+            GameObject hudPrefab = AssetManager.Instance.GetPrefabFullPath("assets/bundles/characters/HUD", false);
+            GameObject prefab = AssetManager.Instance.GetPrefabFullPath("assets/bundles/characters/avatar/prefab104/Avatar_104", false);
 	        Unit unit = EntityFactory.CreateWithId<Unit>(id);
-	        unit.GameObject = UnityEngine.Object.Instantiate(prefab);
-	        GameObject parent = GameObject.Find($"/Global/Unit");
+            unit.GameObject = PoolManager.Spawn(prefab, Vector3.zero, Quaternion.Euler(Vector3.zero));
+            unit.HudGameObject = PoolManager.Spawn(hudPrefab, Vector3.zero, Quaternion.Euler(Vector3.zero));
+            GameObject parent = GameObject.Find($"/Global/Unit");
 	        unit.GameObject.transform.SetParent(parent.transform, false);
-			unit.AddComponent<AnimatorComponent>();
+            UIUtil.SetParent(unit.HudGameObject.transform, unit.GameObject.transform);
+            unit.AddComponent<AnimatorComponent>();
 	        unit.AddComponent<MoveComponent>();
-
-            unitComponent.Add(unit);
+            unit.AddComponent<HUDComponent>();
+            UnitComponent.Instance.Add(unit);
             return unit;
         }
     }

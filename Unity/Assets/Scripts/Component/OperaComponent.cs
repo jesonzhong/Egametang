@@ -34,11 +34,19 @@ namespace Model
 	        direction.Normalize();
 	        SessionComponent.Instance.Session.Send(new Frame_ClickMap() { X = (int)(direction.x * 1000), Z = (int)(direction.y * 1000) });
 
+            //just for test
+            if (Input.GetMouseButtonDown(1))
+            {
+                Unit unit = Game.Scene.GetComponent<UnitComponent>().Get(PlayerComponent.Instance.MyPlayer.UnitId);
+
+                unit.GetComponent<HUDComponent>().AddHpValue(0.05f);
+            }
+
             if (Input.GetMouseButtonDown(0))
             {
                 Unit unit = Game.Scene.GetComponent<UnitComponent>().Get(PlayerComponent.Instance.MyPlayer.UnitId);
 
-                EffectManager.instance.AddFxAutoRemove("EffectCommonAttack", unit.GameObject.transform);
+                unit.GetComponent<HUDComponent>().AddHpValue(-0.05f);
             }
         }
     }
