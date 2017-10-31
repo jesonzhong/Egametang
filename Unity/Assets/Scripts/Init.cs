@@ -12,7 +12,7 @@ using UnityEngine;
 namespace Model
 {
 	public class Init : MonoBehaviour
-	{
+	{ 
 		public static Init Instance;
 
 		public ILRuntime.Runtime.Enviorment.AppDomain AppDomain;

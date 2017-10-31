@@ -154,6 +154,9 @@
     <Reference Include="NPOI.OpenXmlFormats">
       <HintPath>Assets/Plugins/npoi/NPOI.OpenXmlFormats.dll</HintPath>
     </Reference>
+    <Reference Include="Debuger">
+      <HintPath>Assets/Plugins/Debuger.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Unity.Plugins.csproj">

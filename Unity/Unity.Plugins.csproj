@@ -112,6 +112,9 @@
     <Reference Include="NPOI.OpenXmlFormats">
       <HintPath>Assets/Plugins/npoi/NPOI.OpenXmlFormats.dll</HintPath>
     </Reference>
+    <Reference Include="Debuger">
+      <HintPath>Assets/Plugins/Debuger.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Plugins\MongoDB\MongoDB.Bson\BsonConstants.cs" />
