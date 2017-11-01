@@ -85,15 +85,14 @@ namespace Hotfix
 
         public void OnCommonAttack()
         {
+            SessionComponent.Instance.Session.Send(new Request_UseSkill() { Id = PlayerComponent.Instance.MyPlayer.UnitId, skillId = 1 });
+
             Log.Debug("OnCommonAttack");
-            PlayAnimation("attack_2");
-            PlayEffect("Effects/EffectCommonAttack");
         }
 
         public void OnSkill1()
         {
-            PlayAnimation("skill_1");
-            PlayEffect("Effects/EffectSkill1", 1);
+            SessionComponent.Instance.Session.Send(new Request_UseSkill() { Id = PlayerComponent.Instance.MyPlayer.UnitId, skillId = 2 });
             Log.Debug("OnSkill1");
 
             //DisposeEffect();
@@ -101,15 +100,13 @@ namespace Hotfix
 
         public void OnSkill2()
         {
-            PlayAnimation("skill_2");
-            PlayEffect("Effects/EffectSkill2", 2);
+            SessionComponent.Instance.Session.Send(new Request_UseSkill() { Id = PlayerComponent.Instance.MyPlayer.UnitId, skillId = 3 });
             Log.Debug("OnSkill2");
         }
 
         public void OnSkill3()
         {
-            PlayAnimation("powerattack_2");
-            PlayEffect("Effects/EffectSkill3", 3);
+            SessionComponent.Instance.Session.Send(new Request_UseSkill() { Id = PlayerComponent.Instance.MyPlayer.UnitId, skillId = 4 });
             Log.Debug("OnSkill3");
         }
 

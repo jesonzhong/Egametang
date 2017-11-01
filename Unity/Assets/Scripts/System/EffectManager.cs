@@ -25,23 +25,24 @@ public class EffectManager
     public GameObject AddFxAutoRemove(string fxPath, Transform parent = null, float duration = 5f, Vector3 localPos = default(Vector3), Vector3 localRotation = default(Vector3))
     {
         GameObject gp = AddFx(fxPath, parent, localPos, localRotation);
-        DelayManager.instance.delay<string>(duration, fxPath, RemoveFx);
+        //DelayManager.instance.delay<string>(duration, fxPath, RemoveFx);
+        DelayManager.instance.delay<GameObject>(duration, gp, RemoveFx);
         return gp;
     }
 
     public GameObject AddFx(string fxPath, Transform parent = null, Vector3 localPos = default(Vector3), Vector3 localRotation = default(Vector3))
     {
-        if (_fxDict == null)
-        {
-            _fxDict = new BetterDictionary<string, GameObject>();
-        }
+        //if (_fxDict == null)
+        //{
+        //    _fxDict = new BetterDictionary<string, GameObject>();
+        //}
 
         GameObject go = null;
-        _fxDict.TryGetValue(fxPath, out go);
-        if (go != null)
-        {
-            return go;
-        }
+        //_fxDict.TryGetValue(fxPath, out go);
+        //if (go != null)
+        //{
+        //    return go;
+        //}
 
         GameObject prefab = AssetManager.Instance.GetPrefab(fxPath);
         if (prefab == null)
@@ -53,41 +54,43 @@ public class EffectManager
         go.transform.localPosition = localPos;
         go.transform.localRotation = Quaternion.Euler(localRotation);
         go.transform.localScale = Vector3.one;
-        _fxDict.Add(fxPath, go);
+        //_fxDict.Add(fxPath, go);
         return go;
     }
 
-    public void RemoveFx(string fxPath)
+    public void RemoveFx(GameObject go)
     {
-        if (_fxDict == null)
-        {
-            return;
-        }
-
-        GameObject go = null;
-        _fxDict.TryGetValue(fxPath, out go);
         if (go != null)
-        {
             PoolManager.Despawn(go);
-            _fxDict.Remove(fxPath);
-        }
-        else
-        {
-            //SampleDebuger.LogWarning("RemoveFx:" + fxPath);
-        }
+        //if (_fxDict == null)
+        //{
+        //    return;
+        //}
+
+        //GameObject go = null;
+        //_fxDict.TryGetValue(fxPath, out go);
+        //if (go != null)
+        //{
+        //    PoolManager.Despawn(go);
+        //    _fxDict.Remove(fxPath);
+        //}
+        //else
+        //{
+        //    //SampleDebuger.LogWarning("RemoveFx:" + fxPath);
+        //}
     }
 
     private void RemoveAllFx()
     {
-        if (_fxDict == null)
-        {
-            return;
-        }
+        //if (_fxDict == null)
+        //{
+        //    return;
+        //}
 
-        var pairsKey = _fxDict.KeyValuePairs;
-        for (int i = 0; i < pairsKey.Count; i++)
-        {
-            RemoveFx(pairsKey[i].Key);
-        }
+        //var pairsKey = _fxDict.KeyValuePairs;
+        //for (int i = 0; i < pairsKey.Count; i++)
+        //{
+        //    RemoveFx(pairsKey[i].Key);
+        //}
     }
 }

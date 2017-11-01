@@ -33,8 +33,11 @@ namespace Model
 		public Unit Get(long id)
 		{
 			Unit unit;
-			this.idUnits.TryGetValue(id, out unit);
-			return unit;
+			if (this.idUnits.TryGetValue(id, out unit))
+            {
+                return unit;
+            }
+			return null;
 		}
 
 		public void Remove(long id)

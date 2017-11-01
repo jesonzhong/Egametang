@@ -135,4 +135,20 @@ namespace Model
 	public class R2C_Ping: AResponse
 	{
 	}
+
+    //请求使用技能
+    [Message(Opcode.Request_UseSkill)]
+    public class Request_UseSkill : AActorMessage
+    {
+        public long Id;
+        public int skillId;
+    }
+
+    //返回使用技能
+    [Message(Opcode.Response_UseSkill)]
+    public class Response_UseSkill : AActorMessage
+    {
+        public long Id;
+        public int skillId;
+    }
 }

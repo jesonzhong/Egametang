@@ -20,5 +20,8 @@
 		public const ushort Actor_TransferResponse = 2005;
 		public const ushort Frame_ClickMap = 2006;
 		public const ushort Actor_CreateUnits = 2007;
-	}
+
+        public const ushort Request_UseSkill = 3001;
+        public const ushort Response_UseSkill = 3002;
+    }
 }

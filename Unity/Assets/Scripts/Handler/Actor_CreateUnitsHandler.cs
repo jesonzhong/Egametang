@@ -23,20 +23,11 @@ namespace Model
 				{
 					Game.Scene.GetComponent<CameraComponent>().Unit = unit;
 				}
-
-                else
-                {
-                    DelayManager.instance.delay(15, () =>
-                    {
-                        unit.Dispose();
-                    }
-                    );
-                    //PoolManager.Despawn(unit.GameObject, 15);
-                }
-
             }
 
-			Game.Scene.AddComponent<OperaComponent>();
+            OperaComponent oc = Game.Scene.GetComponent<OperaComponent>();
+            if (oc == null)
+                Game.Scene.AddComponent<OperaComponent>();
 		}
 	}
 }
