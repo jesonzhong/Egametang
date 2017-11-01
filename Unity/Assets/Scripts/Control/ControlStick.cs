@@ -56,13 +56,10 @@ public class ControlStick : MonoBehaviour, IBeginDragHandler, IEndDragHandler, I
         if (RectTransformUtility.ScreenPointToWorldPointInRectangle(draggingPlane, eventData.position, eventData.pressEventCamera, out MousePos))
         {
             thumb.position = MousePos;
-
-            Debug.Log("SetTarget Pos");
         }
 
         float length = JoyStickBtn.transform.localPosition.magnitude;
 
-        Debug.Log("length: " + length);
         if (length > 200)
         {
             JoyStickBtn.transform.localPosition = Vector3.ClampMagnitude(JoyStickBtn.transform.localPosition, 200);
@@ -114,7 +111,6 @@ public class ControlStick : MonoBehaviour, IBeginDragHandler, IEndDragHandler, I
         thumb = JoyStickBtn.transform.GetComponent<RectTransform>();
         origPos = JoyStickBackground.transform.localPosition;
         m_originPosition = JoyStickBtn.transform.localPosition;
-        Debug.Log("mRadius: " + mRadius);
 		
 	}
 	

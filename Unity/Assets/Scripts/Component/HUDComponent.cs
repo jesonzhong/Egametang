@@ -51,7 +51,17 @@ namespace Model
             hpSlider.sliderValue = hpValue;
         }
 
-		public void Update()
+        public void SubHpValue(float value)
+        {
+            hpValue -= value;
+            hpSlider.sliderValue = hpValue;
+
+            //直接满血。。
+            if (hpValue < 0)
+                hpValue = 1;
+        }
+
+        public void Update()
 		{
 
 		}

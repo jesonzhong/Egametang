@@ -37,16 +37,12 @@ namespace Model
             //just for test
             if (Input.GetMouseButtonDown(1))
             {
-                Unit unit = Game.Scene.GetComponent<UnitComponent>().Get(PlayerComponent.Instance.MyPlayer.UnitId);
 
-                unit.GetComponent<HUDComponent>().AddHpValue(0.05f);
             }
 
             if (Input.GetMouseButtonDown(0))
             {
-                Unit unit = Game.Scene.GetComponent<UnitComponent>().Get(PlayerComponent.Instance.MyPlayer.UnitId);
 
-                unit.GetComponent<HUDComponent>().AddHpValue(-0.05f);
             }
         }
     }
