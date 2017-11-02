@@ -22,15 +22,23 @@ namespace Hotfix
 
 				//if (response.Count == 1)
 				{
-					Actor_CreateUnits actorCreateUnits = new Actor_CreateUnits();
+                    //发送排行榜信息
+                    Response_RankList retRankList = new Response_RankList();
+
+                    Actor_CreateUnits actorCreateUnits = new Actor_CreateUnits();
 					Unit[] units = Game.Scene.GetComponent<UnitComponent>().GetAll();
 					foreach (Unit u in units)
 					{
 						actorCreateUnits.Units.Add(new UnitInfo() {UnitId = u.Id, X = (int)(u.Position.X * 1000), Z = (int)(u.Position.Z * 1000) });
-					}
+                        retRankList.Units.Add(new RankInfo() { Id = u.Id, name = "张三", score = 100 });
+
+                    }
 					Log.Debug($"{MongoHelper.ToJson(actorCreateUnits)}");
 					MessageHelper.Broadcast(actorCreateUnits);
-				}
+
+                    MessageHelper.Broadcast(retRankList);
+
+                }
 			}
 			catch (Exception e)
 			{

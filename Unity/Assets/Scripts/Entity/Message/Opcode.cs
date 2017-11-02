@@ -23,5 +23,7 @@
 
         public const ushort Request_UseSkill = 3001;
         public const ushort Response_UseSkill = 3002;
+
+        public const ushort Response_RankList = 3003;
     }
 }

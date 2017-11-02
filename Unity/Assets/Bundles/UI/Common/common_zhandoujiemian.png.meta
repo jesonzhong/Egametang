@@ -1,0 +1,1797 @@
+fileFormatVersion: 2
+guid: 52cbb2bf23ef287449ac977e644e9284
+timeCreated: 1502958241
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Common_Image_duiwuyuyinkuang
+    21300002: Common_Image_fenshudituB
+    21300004: Common_Image_fenshudituR
+    21300006: Common_Image_jiantou
+    21300008: Common_Image_jifenban
+    21300010: Common_Image_jifenbandiban
+    21300012: Common_Image_jinengdikuang
+    21300014: Common_Image_jinenglenque
+    21300016: Common_Image_jingyantiao1
+    21300018: Common_Image_jingyantiao2
+    21300020: Common_Image_leidaditu
+    21300022: Common_Image_leidawangge
+    21300024: Common_Image_shamoditu
+    21300026: Common_Image_shamoxiaoditu
+    21300028: Common_Image_shijiandikuang
+    21300030: Common_Image_toudingshengxin01
+    21300032: Common_Image_toudingxuetiaodi
+    21300034: Common_Image_toudingxuetiaohong
+    21300036: Common_Image_toudingxuetiaolv
+    21300038: Common_Image_xiaoditukeji
+    21300040: Common_Image_xuetiaoP1
+    21300042: Common_Image_yaogan
+    21300044: Common_Image_yaoganfangxiangzhizhen
+    21300046: Common_Image_yaoganwaikuang
+    21300048: Common_Image_luandouditu
+    21300050: Common_Image_dianliang01
+    21300052: Common_Image_dianliang02
+    21300054: Common_Image_shijiandikuang_2
+    21300056: Common_Image_xinhao01
+    21300058: Common_Image_xinhao02
+    21300060: Common_Image_xinhao03
+    21300062: Common_Image_xinhao04
+    21300064: Common_Image_xinhao05
+    21300066: Common_Image_xinhao06
+    21300068: Common_Image_jin
+    21300070: Common_Image_tong
+    21300072: Common_Image_ying
+    21300074: Common_Image_duiyoutouxiangdi
+    21300076: Common_Image_duiyouxuetiao01
+    21300078: Common_Image_duiyouxuetiao02
+    21300080: Common_Image_duiyouxuetiaodi
+    21300082: Common_Image_jishadi
+    21300084: Common_Image_duiyoudengjikuang
+    21300086: Common_Image_beidongjinengdi
+    21300088: Common_Image_beidongjinenglinshitubiao
+    21300090: Common_Image_beidongjinengtiao
+    21300092: Common_Image_beidongjineng01
+    21300094: Common_Image_beidongjineng02
+    21300096: Common_Image_beidongjineng03
+    21300098: Common_Image_beidongjineng04
+    21300100: Common_Image_beidongjineng05
+    21300102: Common_Image_beidongjineng06
+    21300104: Common_Image_beidongjineng07
+    21300106: Common_Image_beidongjineng08
+    21300108: Common_Image_beidongjineng09
+    21300110: Common_Image_beidongjineng10
+    21300112: Common_Image_beidongjineng11
+    21300114: Common_Image_beidongjineng12
+    21300116: Common_Image_beidongjinengheidi
+    21300118: Common_Image_fuhuodaojidi
+    21300120: Common_Image_fuhuotiao
+    21300122: Common_Image_zhanlingB
+    21300124: Common_Image_zhanlingbiaoshi_B
+    21300126: Common_Image_zhanlingbiaoshi_R
+    21300128: Common_Image_zhanlingR
+    21300130: Common_Image_duiyousiwang
+    21300132: Common_Image_jinengyaogan
+    21300134: Common_Image_benfang
+    21300136: Common_Image_difang
+    21300138: Maininterface_Btn_quxiaojineng
+    21300140: Common_Image_jinengfangxiangyaogan
+    21300142: 'Common_Image_jinengkuangdi '
+    21300144: Common_Image_jinengkuangdilenque
+    21300146: Common_Image_cetandi
+    21300148: Common_Image_fengexian
+    21300150: Common_Image_jiadi
+    21300152: Common_Image_jiantou2
+    21300154: Common_Image_shangshen
+    21300156: Common_Image_shuxingdi
+    21300158: Common_Image_shuxingtiao
+    21300160: Common_Image_tanchushouqidi
+    21300162: Common_Image_zengzhangtiao
+    21300164: Common_Image_jiahao
+    21300166: Common_Image_chendi
+    21300168: Common_Image_chendi2
+    21300170: Common_Image_mingzilan
+    21300172: Maininterface_Btn_shouqi
+    21300174: Maininterface_Btn_shuxing
+    21300176: Maininterface_Btn_yijianjiadian
+    21300178: Common_Image_luandouditu2
+    21300180: Common_Image_luandouditu3
+    21300182: Common_Image_dadi
+    21300184: Common_Image_yijianjiadian
+    21300186: Common_Image_luandouditu4
+    21300188: Common_Image_biaoqingdadi
+    21300190: Common_Image_cijinengdi
+    21300192: Common_Image_cijinengtiao
+    21300194: Common_Image_hong_0
+    21300196: Common_Image_hong_1
+    21300198: Common_Image_hong_2
+    21300200: Common_Image_hong_3
+    21300202: Common_Image_hong_4
+    21300204: Common_Image_hong_5
+    21300206: Common_Image_hong_6
+    21300208: Common_Image_hong_7
+    21300210: Common_Image_hong_8
+    21300212: Common_Image_hong_9
+    21300214: Common_Image_huang_0
+    21300216: Common_Image_huang_1
+    21300218: Common_Image_huang_2
+    21300220: Common_Image_huang_3
+    21300222: Common_Image_huang_4
+    21300224: Common_Image_huang_5
+    21300226: Common_Image_huang_6
+    21300228: Common_Image_huang_7
+    21300230: Common_Image_huang_8
+    21300232: Common_Image_huang_9
+    21300234: Common_Image_jisha
+    21300236: Common_Image_kuaijieyudi
+    21300238: Common_Image_lan_0
+    21300240: Common_Image_lan_1
+    21300242: Common_Image_lan_2
+    21300244: Common_Image_lan_3
+    21300246: Common_Image_lan_4
+    21300248: Common_Image_lan_5
+    21300250: Common_Image_lan_6
+    21300252: Common_Image_lan_7
+    21300254: Common_Image_lan_8
+    21300256: Common_Image_lan_9
+    21300258: Common_Image_liaotiandi
+    21300260: Common_Image_siwang
+    21300262: Common_Image_wangluo01
+    21300264: Common_Image_wangluo02
+    21300266: Common_Image_wangluo03
+    21300268: Common_Image_wangluo04
+    21300270: Common_Image_wangluo05
+    21300272: Common_Image_wangluo06
+    21300274: Common_Image_xiaoditubaokuang
+    21300276: Common_Image_zhanjidi
+    21300278: Common_Image_zhuangtaidi
+    21300280: Common_Image_zhuangtaitiao
+    21300282: Common_Image_zhugong
+    21300284: Common_Image_zhujinengdi
+    21300286: Common_Image_zhujinengtiao
+    21300288: Maininterface_Btn_biaoqing
+    21300290: Maininterface_Btn_erji
+    21300292: Maininterface_Btn_erji02
+    21300294: Maininterface_Btn_yuyin
+    21300296: Maininterface_Btn_yuyin02
+    21300298: Common_Image_+huang
+    21300300: Common_Image_+lan
+    21300302: Common_Image_putonggongji
+    21300304: Common_Image_guanbi
+    21300306: Common_Image_kaiqi
+    21300308: Common_Image_jinengdengjiquan
+    21300310: Common_Image_toubiaoti
+    21300312: Common_Image_jinengdengjiquan2
+    21300314: Common_Image_sanduandi
+    21300316: Common_Image_wuduandi
+    21300318: Common_Image_cha
+    21300320: Common_Image_jishakuang
+    21300322: Common_Image_jinengdengzhezhao
+    21300324: Common_Image_luandoudanren
+    21300326: Common_Image_luandouwuren
+    21300328: Common_Image_putonggongji_hong
+    21300330: Common_Image_tuandui
+    21300332: Maininterface_Btn_moshi1
+    21300334: Maininterface_Btn_moshi2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
+  - buildTarget: iPhone
+    maxTextureSize: 2048
+    textureFormat: -3
+    compressionQuality: 50
+    allowsAlphaSplitting: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Common_Image_+huang
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 565
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_+lan
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 511
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_benfang
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 469
+        width: 34
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_biaoqingdadi
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 799
+        width: 60
+        height: 60
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 10, y: 16, z: 12, w: 16}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_cha
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 743
+        width: 56
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_cijinengdi
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 779
+        width: 98
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_cijinengtiao
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 783
+        width: 82
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_dadi
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 619
+        width: 205
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_dianliang01
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 745
+        width: 57
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_dianliang02
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 490
+        width: 36
+        height: 16
+      alignment: 9
+      pivot: {x: 0.5694444, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_difang
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 448
+        width: 34
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_duiyoudengjikuang
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 843
+        width: 37
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_duiyousiwang
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 950
+        width: 36
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_duiyoutouxiangdi
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 981
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_duiyouxuetiao01
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 862
+        width: 38
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_duiyouxuetiao02
+      rect:
+        serializedVersion: 2
+        x: 692
+        y: 862
+        width: 38
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_duiyouxuetiaodi
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 860
+        width: 40
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_fengexian
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 1012
+        width: 2
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_fuhuodaojidi
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 559
+        width: 70
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_fuhuotiao
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 489
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_guanbi
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 672
+        width: 77
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_hong_0
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 372
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_hong_1
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 421
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_hong_2
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 394
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_hong_3
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 367
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_hong_4
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 340
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_hong_5
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 313
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_hong_6
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 286
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_hong_7
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 259
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_hong_8
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 324
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_hong_9
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 297
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_huang_0
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 345
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_huang_1
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 318
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_huang_2
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 291
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_huang_3
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 264
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_huang_4
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 237
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_huang_5
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 232
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_huang_6
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 205
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_huang_7
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 6
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_huang_8
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 6
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_huang_9
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 6
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_jiadi
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 690
+        width: 187
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_jiahao
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 746
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_jiantou
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 801
+        width: 20
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_jiantou2
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 893
+        width: 9
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_jifenbandiban
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 796
+        width: 205
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 76, y: 15, z: 78, w: 34}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_jinengdengjiquan
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 463
+        width: 154
+        height: 154
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_jinengdengjiquan2
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 557
+        width: 154
+        height: 154
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_jinengdengzhezhao
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 224
+        width: 154
+        height: 149
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4899329}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_jinengfangxiangyaogan
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 33
+        width: 62
+        height: 65
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_jinengyaogan
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 531
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_jingyantiao1
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 884
+        width: 100
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_jingyantiao2
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 879
+        width: 100
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_jisha
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 451
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_jishadi
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 831
+        width: 445
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_jishakuang
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 713
+        width: 404
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_kaiqi
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 631
+        width: 77
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_kuaijieyudi
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 986
+        width: 349
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_lan_0
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 73
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_lan_1
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 46
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_lan_2
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 19
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_lan_3
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 142
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_lan_4
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 115
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_lan_5
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 88
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_lan_6
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 61
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_lan_7
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 142
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_lan_8
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 115
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_lan_9
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 34
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_liaotiandi
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 242
+        width: 53
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 13, y: 13, z: 12, w: 10}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_luandoudanren
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 415
+        width: 205
+        height: 205
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_luandouwuren
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 208
+        width: 205
+        height: 205
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_mingzilan
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 9
+        width: 66
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_putonggongji
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 401
+        width: 154
+        height: 154
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_putonggongji_hong
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 375
+        width: 154
+        height: 154
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_sanduandi
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 245
+        width: 154
+        height: 154
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_shangshen
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 963
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_shijiandikuang
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 977
+        width: 622
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_shijiandikuang_2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 929
+        width: 622
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_shuxingdi
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 263
+        width: 123
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_shuxingtiao
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 783
+        width: 119
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_siwang
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 425
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_tanchushouqidi
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 740
+        width: 27
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_toubiaoti
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 861
+        width: 507
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 22, z: 0, w: 25}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_toudingshengxin01
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 954
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_toudingxuetiaodi
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 916
+        width: 104
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_toudingxuetiaohong
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 907
+        width: 100
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_toudingxuetiaolv
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 898
+        width: 100
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_tuandui
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 205
+        height: 205
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_wangluo01
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 811
+        width: 36
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_wangluo02
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 479
+        width: 36
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_wangluo03
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 447
+        width: 36
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_wangluo04
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 415
+        width: 36
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_wangluo05
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 383
+        width: 36
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_wangluo06
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 351
+        width: 36
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_wuduandi
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 352
+        width: 154
+        height: 154
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_xiaoditubaokuang
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 508
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_xuetiaoP1
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 889
+        width: 100
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_yaogan
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 867
+        width: 83
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_yaoganfangxiangzhizhen
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 280
+        width: 142
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_yaoganwaikuang
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 622
+        width: 208
+        height: 207
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_yijianjiadian
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 187
+        width: 53
+        height: 53
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_zengzhangtiao
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 783
+        width: 119
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_zhanjidi
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 944
+        width: 311
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 56, y: 0, z: 175, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_zhanlingB
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 906
+        width: 270
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_zhanlingbiaoshi_B
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 504
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_zhanlingbiaoshi_R
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 477
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_zhanlingR
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 868
+        width: 270
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_zhuangtaidi
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 860
+        width: 41
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_zhuangtaitiao
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 903
+        width: 39
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_zhugong
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 399
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_zhujinengdi
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 307
+        width: 154
+        height: 154
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_zhujinengtiao
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 169
+        width: 136
+        height: 136
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Maininterface_Btn_biaoqing
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 420
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Maininterface_Btn_erji
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 351
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Maininterface_Btn_erji02
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 282
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Maininterface_Btn_moshi1
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 213
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Maininterface_Btn_moshi2
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 194
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Maininterface_Btn_quxiaojineng
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 785
+        width: 73
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Maininterface_Btn_yuyin
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 194
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Maininterface_Btn_yuyin02
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 100
+        width: 67
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: -1
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: assets/abres/ui/common/texture/common_zhandoujiemian.img
+  assetBundleVariant: 

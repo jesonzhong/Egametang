@@ -30,7 +30,8 @@ namespace Model
             GameObject rootObject = this.GetEntity<Unit>().HudGameObject;
 
             nameTextMesh = rootObject.transform.Find("Canvas/Center/name").GetComponent<TextMesh>();
-            nameTextMesh.text = "哇哈哈";
+            //ID先显示在名字的位置
+            nameTextMesh.text = this.GetEntity<Unit>().Id.ToString();
 
             hpSlider = rootObject.transform.Find("Canvas/Center/Slider").GetComponent<Slider3D>();
             hpSlider.sliderValue = 1.0f;

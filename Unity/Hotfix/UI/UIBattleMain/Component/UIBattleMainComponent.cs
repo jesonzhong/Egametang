@@ -18,6 +18,8 @@ namespace Hotfix
 	
 	public class UIBattleMainComponent: Component
 	{
+        public static UIBattleMainComponent Instance { get; private set; }
+
         //for test
         private List<Effect> m_effects = new List<Effect>();
 
@@ -28,9 +30,21 @@ namespace Hotfix
         private GameObject Skill2;
         private GameObject Skill3;
 
+        //榜单
+        private List<GameObject> rankList = new List<GameObject>();
+        private List<Text> nameList = new List<Text>();
+        private List<Text> scoreList = new List<Text>();
+
+
+        //小地图
+        private List<GameObject> markList = new List<GameObject>();
+
+
         public void Awake()
 		{
-			ReferenceCollector rc = this.GetEntity<UI>().GameObject.GetComponent<ReferenceCollector>();
+            Instance = this;
+
+            ReferenceCollector rc = this.GetEntity<UI>().GameObject.GetComponent<ReferenceCollector>();
             CommonAttack = rc.Get<GameObject>("CommonAttack");
             if (CommonAttack != null)
             {
@@ -46,6 +60,25 @@ namespace Hotfix
 
             JoyStickBg = rc.Get<GameObject>("ControllerBG");
             JoyStickBtn = rc.Get<GameObject>("ControllerButton");
+
+
+            //榜单
+            GameObject gridGroup = rc.Get<GameObject>("Grid_Group");
+            for (int i=1; i<= 10; i++)
+            {
+                string cellName = "cell_" + i;
+                GameObject cell = gridGroup.transform.Find(cellName).gameObject;
+                if (cell != null)
+                {
+                    rankList.Add(cell);
+                    Text name = cell.transform.Find("name").GetComponent<Text>();
+                    nameList.Add(name);
+                    name.text = "张三" + i;
+                    Text score = cell.transform.Find("score").GetComponent<Text>();
+                    score.text = (100+ i* 10).ToString();
+                    scoreList.Add(score);
+                }
+            }
 
         }
 
@@ -108,6 +141,27 @@ namespace Hotfix
         {
             SessionComponent.Instance.Session.Send(new Request_UseSkill() { Id = PlayerComponent.Instance.MyPlayer.UnitId, skillId = 4 });
             Log.Debug("OnSkill3");
+        }
+
+        public void ProcessRankList(Response_RankList message)
+        {
+            int i = 0;
+            foreach (RankInfo unitInfo in message.Units)
+            {
+                i++;
+                if (i < 10)
+                {
+                    rankList[i].SetActive(true);
+                    nameList[i].text = unitInfo.Id.ToString();
+                    scoreList[i].text = unitInfo.score.ToString();
+                }
+                Debug.Log("Response_RankList 111");
+            }
+
+            for (int j=i; j<9; ++j)
+            {
+                rankList[i].SetActive(false);
+            }
         }
 
 	}

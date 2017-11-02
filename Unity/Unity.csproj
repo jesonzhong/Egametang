@@ -622,6 +622,7 @@
     <Compile Include="Assets\Scripts\Other\ReferenceCollector.cs" />
     <Compile Include="Assets\Scripts\System\DelayManager.cs" />
     <Compile Include="Assets\Scripts\System\EffectManager.cs" />
+    <Compile Include="Assets\Scripts\UIBattleRank.cs" />
     <Compile Include="Assets\Scripts\Update\AssetUpdater.cs" />
     <Compile Include="Assets\Scripts\Update\EnvCheckInit.cs" />
     <Compile Include="Assets\Scripts\Update\FileUtil.cs" />
