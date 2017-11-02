@@ -6,5 +6,6 @@
         Login,
 		Lobby,
         BattleMain,
+        Rooms,
     }
 }

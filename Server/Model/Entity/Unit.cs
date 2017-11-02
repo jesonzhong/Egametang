@@ -21,7 +21,8 @@ namespace Model
 	public sealed class Unit: Entity
 	{
 		public UnitType UnitType { get; private set; }
-		
+		public long RoomID { get; set; }
+
 		[BsonIgnore]
 		public Vector3 Position { get; set; }
 		

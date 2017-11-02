@@ -85,8 +85,9 @@ namespace Hotfix
                 PlayerComponent.Instance.MyPlayer.UnitId = g2CEnterMap.UnitId;
 				Game.Scene.AddComponent<CameraComponent>();
                 Hotfix.Scene.GetComponent<UIComponent>().Remove(UIType.Lobby);
-                Hotfix.Scene.GetComponent<UIComponent>().Create(UIType.BattleMain);
-            }
+				Hotfix.Scene.GetComponent<UIComponent>().Create(UIType.Rooms);
+				//Hotfix.Scene.GetComponent<UIComponent>().Create(UIType.BattleMain);
+			}
 			catch (Exception e)
 			{
 				Log.Error(e.ToStr());

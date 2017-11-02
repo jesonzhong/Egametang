@@ -28,8 +28,7 @@ namespace Hotfix
 				G2R_GetLoginKey g2RGetLoginKey = await gateSession.Call<G2R_GetLoginKey>(new R2G_GetLoginKey() {Account = message.Account});
 
 				string outerAddress = $"{config.GetComponent<OuterConfig>().Host}:{config.GetComponent<OuterConfig>().Port}";
-
-				response.Address = outerAddress;
+                response.Address = outerAddress;
 				response.Key = g2RGetLoginKey.Key;
 				reply(response);
 			}

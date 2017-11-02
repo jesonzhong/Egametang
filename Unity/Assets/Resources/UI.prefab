@@ -61,3 +61,6 @@ MonoBehaviour:
   - key: UIBattleMain
     gameObject: {fileID: 1735044459557534, guid: 2f6c7a3544a7c6a4dbe965e1b038533e,
       type: 2}
+  - key: UIRooms
+    gameObject: {fileID: 1274250124783456, guid: 8b6a5c5381aa23848a1cd6dccfe282bf,
+      type: 2}

@@ -45,5 +45,11 @@
 
 		public const ushort M2M_TrasferUnitRequest = 105;
 		public const ushort M2M_TrasferUnitResponse = 106;
-	}
+
+        public const ushort G2M_CreateMatchRoom = 107;
+        public const ushort M2G_CreateMatchRoom = 108;
+
+        public const ushort G2M_JoinMatchRoom = 109;
+        public const ushort M2G_JoinMatchRoom = 110;
+    }
 }

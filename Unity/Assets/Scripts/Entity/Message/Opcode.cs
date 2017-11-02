@@ -12,8 +12,16 @@
 		public const ushort C2G_EnterMap = 1006;
 		public const ushort G2C_EnterMap = 1007;
 		public const ushort C2M_Reload = 1008;
+        public const ushort C2G_CreateMatchRoom = 1009;
+        public const ushort G2C_CreateMatchRooom = 1010;
 
-		public const ushort Actor_Test = 2001;
+        public const ushort C2G_GetRoomList = 1011;
+        public const ushort G2C_GetRoomList = 1012;
+
+        public const ushort C2G_JoinMatchRoom = 1013;
+        public const ushort G2C_JoinMatchRoom = 1014;
+
+        public const ushort Actor_Test = 2001;
 		public const ushort Actor_TestRequest = 2002;
 		public const ushort Actor_TestResponse = 2003;
 		public const ushort Actor_TransferRequest = 2004;

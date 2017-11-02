@@ -90,7 +90,51 @@ namespace Model
 		public int Count;
 	}
 
-	public class UnitInfo
+    [ProtoContract]
+    [Message(Opcode.C2G_CreateMatchRoom)]
+    public class C2G_CreateMatchRoom : ARequest
+    {
+    }
+
+    [ProtoContract]
+    [Message(Opcode.G2C_CreateMatchRooom)]
+    public class G2C_CreateMatchRoom : AResponse
+    {
+        [ProtoMember(1)]
+        public long RoomId;
+    }
+
+    [ProtoContract]
+    [Message(Opcode.C2G_JoinMatchRoom)]
+    public class C2G_JoinMatchRoom : ARequest
+    {
+        public long RoomId;
+    }
+
+    [ProtoContract]
+    [Message(Opcode.G2C_JoinMatchRoom)]
+    public class G2C_JoinMatchRoom : AResponse
+    {
+        [ProtoMember(1)]
+        public long[] UnitIds;
+    }
+
+    [ProtoContract]
+    [Message(Opcode.C2G_GetRoomList)]
+    public class C2G_GetRoomList : ARequest
+    {
+
+    }
+
+    [ProtoContract]
+    [Message(Opcode.G2C_GetRoomList)]
+    public class G2C_GetRoomList : AResponse
+    {
+        [ProtoMember(1)]
+        public long[] RoomIds;
+    }
+
+    public class UnitInfo
 	{
 		public long UnitId;
 		public int X;
