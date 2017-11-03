@@ -13,7 +13,7 @@ namespace Hotfix
 			{
                 MatchRoomComponent roomComponent = Game.Scene.GetComponent<MatchRoomComponent>();
                 MatchRoom matchroom = roomComponent.Get(message.RoomId);
-
+                
                 Unit unit = Game.Scene.GetComponent<UnitComponent>().Get(message.UnitId);
                 if (unit == null)
                 {

@@ -38,15 +38,15 @@ namespace Hotfix
             {
 				// 客户端发送不需要设置Frame消息的id，在这里统一设置，防止客户端被破解发个假的id过来
 	            aFrameMessage.Id = entity.Id;
-                if (entity is Unit unit)
+                Unit unit = entity as Unit;
+                
+                MatchRoomComponent roomComponent = Game.Scene.GetComponent<MatchRoomComponent>();
+                MatchRoom matchroom = roomComponent.Get(unit.RoomID);
+                if (matchroom != null)
                 {
-                    MatchRoomComponent roomComponent = Game.Scene.GetComponent<MatchRoomComponent>();
-                    MatchRoom matchroom = roomComponent.Get(unit.RoomID);
-                    if (matchroom != null)
-                    {
-                        matchroom.Add(aFrameMessage);
-                    }
+                    matchroom.Add(aFrameMessage);
                 }
+
 				//Game.Scene.GetComponent<ServerFrameComponent>().Add(aFrameMessage);
 	            ActorResponse response = new ActorResponse
 	            {
