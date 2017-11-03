@@ -38,6 +38,16 @@ namespace Model
 				return;
 			}
 
+            if (RoomID != 0)
+            {
+                MatchRoomComponent roomComponent = Game.Scene.GetComponent<MatchRoomComponent>();
+                MatchRoom matchroom = roomComponent.Get(RoomID);
+                if (matchroom != null)
+                {
+                    matchroom.Remove(this.Id);
+                }
+            }
+
 			base.Dispose();
 		}
 	}

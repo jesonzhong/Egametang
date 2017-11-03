@@ -1,5 +1,3 @@
-// 服务器与客户端之间的消息 Opcode从1-9999
-
 using System.Collections.Generic;
 using ProtoBuf;
 
@@ -90,24 +88,38 @@ namespace Model
 		public int Count;
 	}
 
-    [ProtoContract]
-    [Message(Opcode.C2G_CreateMatchRoom)]
-    public class C2G_CreateMatchRoom : ARequest
-    {
-    }
+	[ProtoContract]
+	[Message(Opcode.C2G_CreateMatchRoom)]
+	public class C2G_CreateMatchRoom: ARequest
+	{
+	}
 
-    [ProtoContract]
-    [Message(Opcode.G2C_CreateMatchRooom)]
-    public class G2C_CreateMatchRoom : AResponse
-    {
-        [ProtoMember(1)]
-        public long RoomId;
-    }
+	[ProtoContract]
+	[Message(Opcode.G2C_CreateMatchRoom)]
+	public class G2C_CreateMatchRoom : AResponse
+	{
+		[ProtoMember(1)]
+		public long RoomId;
+	}
+	
+	[ProtoContract]
+	[Message(Opcode.C2G_GetRoomList)]
+	public class C2G_GetRoomList: ARequest
+	{
+	}
 
+	[ProtoContract]
+	[Message(Opcode.G2C_GetRoomList)]
+	public class G2C_GetRoomList: AResponse
+	{
+		[ProtoMember(1)]
+		public long[] RoomIds;
+	}
     [ProtoContract]
     [Message(Opcode.C2G_JoinMatchRoom)]
     public class C2G_JoinMatchRoom : ARequest
     {
+        [ProtoMember(1)]
         public long RoomId;
     }
 
@@ -118,23 +130,9 @@ namespace Model
         [ProtoMember(1)]
         public long[] UnitIds;
     }
+    
 
-    [ProtoContract]
-    [Message(Opcode.C2G_GetRoomList)]
-    public class C2G_GetRoomList : ARequest
-    {
-
-    }
-
-    [ProtoContract]
-    [Message(Opcode.G2C_GetRoomList)]
-    public class G2C_GetRoomList : AResponse
-    {
-        [ProtoMember(1)]
-        public long[] RoomIds;
-    }
-
-    public class UnitInfo
+	public class UnitInfo
 	{
 		public long UnitId;
 		public int X;
@@ -153,7 +151,6 @@ namespace Model
 		public AMessage Message;
 	}
 
-	// 服务端发给客户端,每帧一条
 	[Message(Opcode.FrameMessage)]
 	public class FrameMessage : AActorMessage
 	{
@@ -161,7 +158,6 @@ namespace Model
 		public List<AFrameMessage> Messages = new List<AFrameMessage>();
 	}
 
-	// 客户端点击地图
 	[ProtoContract]
 	[Message(Opcode.Frame_ClickMap)]
 	public class Frame_ClickMap: AFrameMessage
@@ -171,33 +167,32 @@ namespace Model
 		[ProtoMember(2)]
 		public int Z;
 	}
-	
-	// 客户端点击动作
+
 	[ProtoContract]
 	[Message(Opcode.Frame_ClickAction)]
 	public class Frame_ClickAction: AFrameMessage
 	{
-		[ProtoMember(1)]
+		[ProtoMember(1)] 
 		public int ActionID;
 	}
-
+	
 	[Message(Opcode.C2M_Reload)]
 	public class C2M_Reload: ARequest
 	{
 		public AppType AppType;
 	}
 
-	[Message(11)]
+	[Message(Opcode.M2C_Reload)]
 	public class M2C_Reload: AResponse
 	{
 	}
 
-	[Message(14)]
+	[Message(Opcode.C2R_Ping)]
 	public class C2R_Ping: ARequest
 	{
 	}
 
-	[Message(15)]
+	[Message(Opcode.R2C_Ping)]
 	public class R2C_Ping: AResponse
 	{
 	}

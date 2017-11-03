@@ -100,8 +100,9 @@ namespace App
 						Game.Scene.AddComponent<RealmGateAddressComponent>();
 						Game.Scene.AddComponent<GateSessionKeyComponent>();
 						Game.Scene.AddComponent<ConfigComponent>();
-						Game.Scene.AddComponent<ServerFrameComponent>();
-						break;
+                        Game.Scene.AddComponent<MatchRoomComponent>();
+                        //Game.Scene.AddComponent<ServerFrameComponent>();
+                        break;
 					case AppType.Benchmark:
 						Game.Scene.AddComponent<NetOuterComponent>();
 						Game.Scene.AddComponent<BenchmarkComponent, string>(clientConfig.Address);

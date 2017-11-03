@@ -35,10 +35,10 @@ namespace Hotfix
                 GetRoomList.GetComponent<Button>().onClick.Add(OnGetRoomList);
             }
             
-            CreateRoom = rc.Get<GameObject>("CreateRoom");
+            CreateRoom = rc.Get<GameObject>("CreateMatchRoom");
             if (CreateRoom != null)
             {
-                CreateRoom.GetComponent<Button>().onClick.Add(OnCreateRoom);
+                CreateRoom.GetComponent<Button>().onClick.Add(OnCreateMatchRoom);
             }
         }
 
@@ -47,15 +47,14 @@ namespace Hotfix
             
         }
 
-        public async void OnCreateRoom()
+        public async void OnCreateMatchRoom()
         {
-            Log.Debug("OnCreateRoom");
+            Log.Debug("OnCreateMatchRoom");
             
-            G2C_CreateRoom g2CCreateRoom = await SessionComponent.Instance.Session.Call<G2C_CreateRoom>(new C2G_CreateRoom());
+            G2C_CreateMatchRoom g2CCreateRoom = await SessionComponent.Instance.Session.Call<G2C_CreateMatchRoom>(new C2G_CreateMatchRoom());
             string roomid = g2CCreateRoom.RoomId.ToString();
-            Hotfix.Scene.GetComponent<UIComponent>().Remove(UIType.Rooms);
-            Hotfix.Scene.GetComponent<UIComponent>().Create(UIType.BattleMain);
-            Log.Debug("OnCreateRoom --- RoomID " + roomid);
+            
+            Log.Debug("OnCreateMatchRoom --- RoomID " + roomid);
         }
 
         public async void OnGetRoomList()
@@ -71,24 +70,32 @@ namespace Hotfix
                 Text text = button.transform.Find("Text").GetComponent<Text>();
                 text.text = g2CGetRoomList.RoomIds[i].ToString();
                 
+                button.onClick.AddListener(() =>
+                {
+                    this.OnClickAddRoom(button.gameObject);
+                });
+                
                 roomItem.transform.localScale = roomItem.transform.localScale;
                 roomItem.transform.localPosition = roomItem.transform.localPosition;
                 roomItem.SetActive(true);
             }
-            /*TimerComponent timerComponent = Hotfix.Scene.GetComponent<TimerComponent>();
-            while (true)
-            {
-                await timerComponent.WaitAsync(1000);
-                GameObject roomItem = GameObject.Instantiate(RoomItem,GridCenter.transform);
-                roomItem.transform.localScale = roomItem.transform.localScale;
-                roomItem.transform.localPosition = roomItem.transform.localPosition;
-                roomItem.SetActive(true);
-            }*/
         }
 
-        public async void OnAddRoom()
+        public void OnClickAddRoom(GameObject butObj)
         {
+            Text text = butObj.transform.Find("Text").GetComponent<Text>();
+            Debug.Log(text.text);
+
+            JoinRoom(long.Parse(text.text));
+        }
+
+        public async void JoinRoom(long roomid)
+        {
+            G2C_JoinMatchRoom g2CCreateRoom = await SessionComponent.Instance.Session.Call<G2C_JoinMatchRoom>(new C2G_JoinMatchRoom(){  RoomId = roomid });
+            Debug.Log(g2CCreateRoom.UnitIds.Length.ToString());
             
+            Hotfix.Scene.GetComponent<UIComponent>().Remove(UIType.Rooms);
+            Hotfix.Scene.GetComponent<UIComponent>().Create(UIType.BattleMain);
         }
     }
 }

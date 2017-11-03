@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 114170309525851334}
   - component: {fileID: 114183315333493486}
   m_Layer: 5
-  m_Name: CreateRoom
+  m_Name: CreateMatchRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -319,7 +319,7 @@ MonoBehaviour:
     gameObject: {fileID: 1508805664848386}
   - key: GetRoomList
     gameObject: {fileID: 1674139982929342}
-  - key: CreateRoom
+  - key: CreateMatchRoom
     gameObject: {fileID: 1156621945804258}
 --- !u!114 &114139116389414030
 MonoBehaviour:
@@ -488,7 +488,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 224165588833035472}
   m_Direction: 2
   m_Value: 0
-  m_Size: 0.9996022
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -1335,7 +1335,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.0988036}
+  m_AnchoredPosition: {x: 0, y: 0.00000037252903}
   m_SizeDelta: {x: 208.5, y: 280}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &224973043861991896

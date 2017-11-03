@@ -2,7 +2,7 @@
 
 namespace Model
 {
-    [MessageHandler(Opcode.Frame_ClickAction)]
+    [MessageHandler((int)Opcode.Frame_ClickAction)]
     public class Frame_ClikeActionHandler : AMHandler<Frame_ClickAction>
     {
         protected override void Run(Frame_ClickAction message)

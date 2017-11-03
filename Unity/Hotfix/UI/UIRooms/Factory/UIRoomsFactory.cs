@@ -14,7 +14,7 @@ namespace Hotfix
                 GameObject bundleGameObject = ((GameObject)Resources.Load("UI")).Get<GameObject>("UIRooms");
                 GameObject uirooms = UnityEngine.Object.Instantiate(bundleGameObject);
                 uirooms.layer = LayerMask.NameToLayer(LayerNames.UI);
-                UI ui = new UI(scene, type, null, uirooms);
+                UI ui = EntityFactory.Create<UI, Scene, UI, GameObject>(scene, null, uirooms);
 
                 ui.AddComponent<UIRoomsComponent>();
                 return ui;

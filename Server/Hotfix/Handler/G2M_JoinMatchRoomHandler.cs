@@ -14,11 +14,14 @@ namespace Hotfix
                 MatchRoomComponent roomComponent = Game.Scene.GetComponent<MatchRoomComponent>();
                 MatchRoom matchroom = roomComponent.Get(message.RoomId);
 
-                Unit unit = EntityFactory.Create<Unit>();
+                Unit unit = Game.Scene.GetComponent<UnitComponent>().Get(message.UnitId);
+                if (unit == null)
+                {
+                    unit = EntityFactory.CreateWithId<Unit>(message.UnitId);
+                }
                 await unit.AddComponent<ActorComponent, IEntityActorHandler>(new MapUnitEntityActorHandler()).AddLocation();
                 unit.AddComponent<UnitGateComponent, long>(message.GateSessionId);
-                Game.Scene.GetComponent<UnitComponent>().Add(unit);
-                
+                //Game.Scene.GetComponent<UnitComponent>().Add(unit);
                 unit.RoomID = matchroom.Id;
                 matchroom.Add(unit);
 
@@ -30,8 +33,14 @@ namespace Hotfix
                 {
                     response.UnitIds[i] = units[i].Id;
                 }
-
-				reply(response);
+                Actor_CreateUnits actorCreateUnits = new Actor_CreateUnits();
+                foreach (Unit u in units)
+                {
+                    actorCreateUnits.Units.Add(new UnitInfo() { UnitId = u.Id, X = (int)(u.Position.X * 1000), Z = (int)(u.Position.Z * 1000) });
+                }
+                Log.Debug($"{MongoHelper.ToJson(actorCreateUnits)}");
+                MessageHelper.Broadcast(actorCreateUnits, units);
+                reply(response);
 			}
 			catch (Exception e)
 			{

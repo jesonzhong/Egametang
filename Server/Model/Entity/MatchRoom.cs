@@ -14,10 +14,47 @@ namespace Model
     
     public class MatchRoom : Entity
 	{
+        public int Frame;
+        public FrameMessage FrameMessage;
         private readonly Dictionary<long, Unit> idUnits = new Dictionary<long, Unit>();
         public void Awake()
         {
+            Frame = 0;
+            FrameMessage = new FrameMessage() { Frame = Frame };
+            UpdateFrameAsync();
+        }
 
+        public async void UpdateFrameAsync()
+        {
+            TimerComponent timerComponent = Game.Scene.GetComponent<TimerComponent>();
+
+            while (true)
+            {
+                if (Id == 0)
+                {
+                    return;
+                }
+
+                await timerComponent.WaitAsync(40);
+                Broadcast(FrameMessage, GetAll());
+                ++Frame;
+                FrameMessage = new FrameMessage() { Frame = Frame };
+            }
+        }
+
+        public void Add(AFrameMessage message)
+        {
+            FrameMessage.Messages.Add(message);
+        }
+
+        void Broadcast(AActorMessage message, Unit[] units)
+        {
+            ActorProxyComponent actorProxyComponent = Game.Scene.GetComponent<ActorProxyComponent>();
+            foreach (Unit unit in units)
+            {
+                long gateSessionId = unit.GetComponent<UnitGateComponent>().GateSessionId;
+                actorProxyComponent.Get(gateSessionId).Send(message);
+            }
         }
 
         public void Add(Unit unit)
