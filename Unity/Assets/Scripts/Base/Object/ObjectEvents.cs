@@ -43,7 +43,19 @@ namespace Model
 			}
 		}
 
-		public Assembly HotfixAssembly;
+		private Assembly hotfixAssembly;
+
+		public Assembly HotfixAssembly
+		{
+			get
+			{
+				return this.hotfixAssembly;
+			}
+			set
+			{
+				this.hotfixAssembly = value;
+			}
+		}
 
 		private readonly Dictionary<string, Assembly> assemblies = new Dictionary<string, Assembly>();
 
@@ -63,6 +75,16 @@ namespace Model
 		public static void Close()
 		{
 			instance = null;
+		}
+
+		public void LoadHotfixDll()
+		{
+#if ILRuntime
+			DllHelper.LoadHotfixAssembly();	
+#else
+			ObjectEvents.Instance.HotfixAssembly = DllHelper.LoadHotfixAssembly();
+#endif
+			this.Load();
 		}
 
 		public void Add(string name, Assembly assembly)

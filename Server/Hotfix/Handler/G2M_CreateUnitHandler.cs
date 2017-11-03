@@ -27,10 +27,12 @@ namespace Hotfix
 
                     Actor_CreateUnits actorCreateUnits = new Actor_CreateUnits();
 					Unit[] units = Game.Scene.GetComponent<UnitComponent>().GetAll();
+                    int tmpScore = 100;
 					foreach (Unit u in units)
 					{
 						actorCreateUnits.Units.Add(new UnitInfo() {UnitId = u.Id, X = (int)(u.Position.X * 1000), Z = (int)(u.Position.Z * 1000) });
-                        retRankList.Units.Add(new RankInfo() { Id = u.Id, name = "张三", score = 100 });
+                        retRankList.Units.Add(new RankInfo() { Id = u.Id, name = "张三", score = tmpScore });
+                        tmpScore -= 5;
 
                     }
 					Log.Debug($"{MongoHelper.ToJson(actorCreateUnits)}");

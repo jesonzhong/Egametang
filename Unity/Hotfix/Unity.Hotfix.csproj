@@ -19,7 +19,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>..\Temp\UnityVS_bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
@@ -28,7 +28,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\Temp\UnityVS_bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -78,17 +78,10 @@
     <Compile Include="Base\Object\ObjectEvents.cs" />
     <Compile Include="Base\Object\ObjectPool.cs" />
     <Compile Include="Base\Other\IUIFactory.cs" />
-    <Compile Include="Component\EventComponent.cs" />
-    <Compile Include="Component\GameObjectComponent.cs" />
-    <Compile Include="Component\KVComponent.cs" />
-    <Compile Include="Component\MessageDispatherComponent.cs" />
-    <Compile Include="Component\TimeComponent.cs" />
-    <Compile Include="Component\TimerComponent.cs" />
     <Compile Include="Component\UIComponent.cs" />
     <Compile Include="Entity\Hotfix.cs" />
     <Compile Include="Entity\Scene.cs" />
     <Compile Include="Entity\UI.cs" />
-    <Compile Include="Event\SessionRecvMessage_Dispatch.cs" />
     <Compile Include="Handler\MsgRankListHandler.cs" />
     <Compile Include="Init.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -100,7 +93,10 @@
     <Compile Include="UI\UILogin\Event\InitSceneStart_CreateLoginUI.cs" />
     <Compile Include="UI\UILogin\Factory\UILoginFactory.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Event\" />
+    <Folder Include="Handler\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>"$(ProjectDir)\..\Tools\pdb2mdb.exe" $(TargetFileName)</PostBuildEvent>

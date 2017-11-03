@@ -148,19 +148,19 @@ namespace Hotfix
             int i = 0;
             foreach (RankInfo unitInfo in message.Units)
             {
-                i++;
                 if (i < 10)
                 {
                     rankList[i].SetActive(true);
                     nameList[i].text = unitInfo.Id.ToString();
                     scoreList[i].text = unitInfo.score.ToString();
                 }
-                Debug.Log("Response_RankList 111");
+
+                i++;
             }
 
-            for (int j=i; j<9; ++j)
+            for (int j=i; j<10; ++j)
             {
-                rankList[i].SetActive(false);
+                rankList[j].SetActive(false);
             }
         }
 

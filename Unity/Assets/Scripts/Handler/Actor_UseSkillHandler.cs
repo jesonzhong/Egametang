@@ -2,7 +2,7 @@
 
 namespace Model
 {
-	[MessageHandler(Opcode.Response_UseSkill)]
+	[MessageHandler((int)Opcode.Response_UseSkill)]
 	public class Response_UseSkillHandler : AMHandler<Response_UseSkill>
 	{
 		protected override void Run(Response_UseSkill message)

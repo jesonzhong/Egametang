@@ -14,9 +14,10 @@ namespace Hotfix
 				GameObject bundleGameObject = ((GameObject)Resources.Load("UI")).Get<GameObject>("UIBattleMain");
 				GameObject battleMain = UnityEngine.Object.Instantiate(bundleGameObject);
                 battleMain.layer = LayerMask.NameToLayer(LayerNames.UI);
-				UI ui = new UI(scene, type, null, battleMain);
 
-				ui.AddComponent<UIBattleMainComponent>();
+                UI ui = EntityFactory.Create<UI, Scene, UI, GameObject>(scene, null, battleMain);
+
+                ui.AddComponent<UIBattleMainComponent>();
 				return ui;
 	        }
 	        catch (Exception e)

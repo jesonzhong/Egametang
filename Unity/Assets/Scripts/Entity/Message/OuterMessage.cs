@@ -1,39 +1,43 @@
-// 服务器与客户端之间的消息 Opcode从1-9999
-
 using System.Collections.Generic;
-using MongoDB.Bson.Serialization;
+using ProtoBuf;
 
 namespace Model
 {
+	[ProtoContract]
 	[Message(Opcode.C2R_Login)]
 	public class C2R_Login: ARequest
 	{
+		[ProtoMember(1)]
 		public string Account;
+
+		[ProtoMember(2)]
 		public string Password;
 	}
 
+	[ProtoContract]
 	[Message(Opcode.R2C_Login)]
 	public class R2C_Login: AResponse
 	{
+		[ProtoMember(1)]
 		public string Address { get; set; }
-		
+
+		[ProtoMember(2)]
 		public long Key { get; set; }
 	}
 
+	[ProtoContract]
 	[Message(Opcode.C2G_LoginGate)]
 	public class C2G_LoginGate: ARequest
 	{
+		[ProtoMember(1)]
 		public long Key;
-
-		public C2G_LoginGate(long key)
-		{
-			this.Key = key;
-		}
 	}
 
+	[ProtoContract]
 	[Message(Opcode.G2C_LoginGate)]
 	public class G2C_LoginGate: AResponse
 	{
+		[ProtoMember(1)]
 		public long PlayerId;
 	}
 
@@ -68,15 +72,19 @@ namespace Model
 	{
 	}
 
+	[ProtoContract]
 	[Message(Opcode.C2G_EnterMap)]
 	public class C2G_EnterMap: ARequest
 	{
 	}
 
+	[ProtoContract]
 	[Message(Opcode.G2C_EnterMap)]
 	public class G2C_EnterMap: AResponse
 	{
+		[ProtoMember(1)]
 		public long UnitId;
+		[ProtoMember(2)]
 		public int Count;
 	}
 
@@ -99,7 +107,6 @@ namespace Model
 		public AMessage Message;
 	}
 
-	// 服务端发给客户端,每帧一条
 	[Message(Opcode.FrameMessage)]
 	public class FrameMessage : AActorMessage
 	{
@@ -107,11 +114,13 @@ namespace Model
 		public List<AFrameMessage> Messages = new List<AFrameMessage>();
 	}
 
-	// 客户端点击地图
+	[ProtoContract]
 	[Message(Opcode.Frame_ClickMap)]
 	public class Frame_ClickMap: AFrameMessage
 	{
+		[ProtoMember(1)]
 		public int X;
+		[ProtoMember(2)]
 		public int Z;
 	}
 
@@ -121,22 +130,22 @@ namespace Model
 		public AppType AppType;
 	}
 
-	[Message(11)]
+	[Message(Opcode.M2C_Reload)]
 	public class M2C_Reload: AResponse
 	{
 	}
 
-	[Message(14)]
+	[Message(Opcode.C2R_Ping)]
 	public class C2R_Ping: ARequest
 	{
 	}
 
-	[Message(15)]
+	[Message(Opcode.R2C_Ping)]
 	public class R2C_Ping: AResponse
 	{
 	}
 
-    //请求使用技能
+    //����ʹ�ü���
     [Message(Opcode.Request_UseSkill)]
     public class Request_UseSkill : AActorMessage
     {
@@ -144,7 +153,7 @@ namespace Model
         public int skillId;
     }
 
-    //返回使用技能
+    //����ʹ�ü���
     [Message(Opcode.Response_UseSkill)]
     public class Response_UseSkill : AActorMessage
     {
@@ -159,7 +168,7 @@ namespace Model
         public int score;
     }
 
-    //返回排行榜
+    //�������а�
     [Message(Opcode.Response_RankList)]
     public class Response_RankList : AActorMessage
     {
