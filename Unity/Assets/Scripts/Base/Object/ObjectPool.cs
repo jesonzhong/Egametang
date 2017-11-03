@@ -5,13 +5,20 @@ namespace Model
 {
     public class ObjectPool
     {
-	    private static ObjectPool instance;
+	    private static ObjectPool instance = null;
 
 	    public static ObjectPool Instance
 	    {
 		    get
 		    {
-			    return instance ?? new ObjectPool();
+                if (instance == null)
+                {
+                    instance = new ObjectPool();
+                }
+
+                return instance;
+
+                //return instance ?? new ObjectPool();
 		    }
 	    }
 

@@ -33,7 +33,7 @@ namespace Hotfix
 			Session session = null;
 			try
 			{
-				session = Hotfix.Scene.ModelScene.GetComponent<NetOuterComponent>().Create("127.0.0.1:10002");
+				session = Hotfix.Scene.ModelScene.GetComponent<NetOuterComponent>().Create("192.168.93.212:10002");//.Create("192.168.93.61:10002");
 				string text = this.account.GetComponent<InputField>().text;
 				R2C_Login r2CLogin = await session.Call<R2C_Login>(new C2R_Login() { Account = text, Password = "111111" });
 				Session gateSession = Hotfix.Scene.ModelScene.GetComponent<NetOuterComponent>().Create(r2CLogin.Address);

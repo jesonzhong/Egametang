@@ -10,7 +10,8 @@
 		{
 			long time = TimeHelper.ClientNowSeconds();
 
-			return (AppId << 48) + (time << 16) + ++value;
+			return ((AppId << 48) + (time << 16) + ++value) % 10000;
+            
 		}
 	}
 }

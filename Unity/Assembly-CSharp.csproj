@@ -8,7 +8,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{CD8C9303-404B-FB8D-6B9B-21988D5CAC0A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -59,6 +60,18 @@
     <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
     <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
+    <Compile Include="Assets\Scripts\AssetBundle&amp;Pool\AssetBundleLoader.cs" />
+    <Compile Include="Assets\Scripts\AssetBundle&amp;Pool\AssetBundleLoadOperation.cs" />
+    <Compile Include="Assets\Scripts\AssetBundle&amp;Pool\AssetBundleManager.cs" />
+    <Compile Include="Assets\Scripts\AssetBundle&amp;Pool\AssetCachePool.cs" />
+    <Compile Include="Assets\Scripts\AssetBundle&amp;Pool\AssetManager.cs" />
+    <Compile Include="Assets\Scripts\AssetBundle&amp;Pool\BetterDictionary.cs" />
+    <Compile Include="Assets\Scripts\AssetBundle&amp;Pool\EventDispatcher.cs" />
+    <Compile Include="Assets\Scripts\AssetBundle&amp;Pool\EventEmitter.cs" />
+    <Compile Include="Assets\Scripts\AssetBundle&amp;Pool\Globals.cs" />
+    <Compile Include="Assets\Scripts\AssetBundle&amp;Pool\Pool.cs" />
+    <Compile Include="Assets\Scripts\AssetBundle&amp;Pool\PoolManager.cs" />
+    <Compile Include="Assets\Scripts\AssetBundle&amp;Pool\SampleDebuger.cs" />
     <Compile Include="Assets\Scripts\Base\BehaviorTree\BehaviorNodeConfig.cs" />
     <Compile Include="Assets\Scripts\Base\BehaviorTree\BehaviorTree.cs" />
     <Compile Include="Assets\Scripts\Base\BehaviorTree\BehaviorTreeArgsDict.cs" />
@@ -232,6 +245,7 @@
     <Compile Include="Assets\Scripts\Component\ConfigComponent.cs" />
     <Compile Include="Assets\Scripts\Component\EventComponent.cs" />
     <Compile Include="Assets\Scripts\Component\FrameMessageComponent.cs" />
+    <Compile Include="Assets\Scripts\Component\HUDComponent.cs" />
     <Compile Include="Assets\Scripts\Component\MessageDispatherComponent.cs" />
     <Compile Include="Assets\Scripts\Component\MoveComponent.cs" />
     <Compile Include="Assets\Scripts\Component\NetOuterComponent.cs" />
@@ -250,6 +264,7 @@
     <Compile Include="Assets\Scripts\Entity\AssetBundleLoaderAsync.cs" />
     <Compile Include="Assets\Scripts\Entity\Config\BuffConfig.cs" />
     <Compile Include="Assets\Scripts\Entity\Config\UnitConfig.cs" />
+    <Compile Include="Assets\Scripts\Entity\Effect.cs" />
     <Compile Include="Assets\Scripts\Entity\Game.cs" />
     <Compile Include="Assets\Scripts\Entity\Message\Opcode.cs" />
     <Compile Include="Assets\Scripts\Entity\Message\OuterMessage.cs" />
@@ -260,6 +275,7 @@
     <Compile Include="Assets\Scripts\Entity\WWWAsync.cs" />
     <Compile Include="Assets\Scripts\Event\NumericChangeEvent_NotifyWatcher.cs" />
     <Compile Include="Assets\Scripts\Event\NumericWatcher_Hp_ShowUI.cs" />
+    <Compile Include="Assets\Scripts\Factory\EffectFactory.cs" />
     <Compile Include="Assets\Scripts\Factory\PlayerFactory.cs" />
     <Compile Include="Assets\Scripts\Factory\UnitFactory.cs" />
     <Compile Include="Assets\Scripts\Handler\Actor_CreateUnitsHandler.cs" />
@@ -275,6 +291,12 @@
     <Compile Include="Assets\Scripts\Helper\PositionHelper.cs" />
     <Compile Include="Assets\Scripts\Helper\ResourceHelper.cs" />
     <Compile Include="Assets\Scripts\Init.cs" />
+    <Compile Include="Assets\Scripts\Massive\ClientConfig.cs" />
+    <Compile Include="Assets\Scripts\Massive\ServerConfig.cs" />
+    <Compile Include="Assets\Scripts\Massive\Slider3D.cs" />
+    <Compile Include="Assets\Scripts\Massive\SysUtil.cs" />
+    <Compile Include="Assets\Scripts\Massive\UIBillboard.cs" />
+    <Compile Include="Assets\Scripts\Massive\UIUtil.cs" />
     <Compile Include="Assets\Scripts\MonoConfig\CanvasConfig.cs" />
     <Compile Include="Assets\Scripts\Other\Define.cs" />
     <Compile Include="Assets\Scripts\Other\IInstanceMethod.cs" />
@@ -284,6 +306,13 @@
     <Compile Include="Assets\Scripts\Other\MotionType.cs" />
     <Compile Include="Assets\Scripts\Other\NumericWatcherAttribute.cs" />
     <Compile Include="Assets\Scripts\Other\ReferenceCollector.cs" />
+    <Compile Include="Assets\Scripts\System\DelayManager.cs" />
+    <Compile Include="Assets\Scripts\System\EffectManager.cs" />
+    <Compile Include="Assets\Scripts\UIBattleRank.cs" />
+    <Compile Include="Assets\Scripts\Update\AssetUpdater.cs" />
+    <Compile Include="Assets\Scripts\Update\EnvCheckInit.cs" />
+    <Compile Include="Assets\Scripts\Update\FileUtil.cs" />
+    <Compile Include="Assets\Scripts\Update\VersionManager.cs" />
     <Compile Include="Assets\ThirdParty\ILRuntime\ILRuntime\CLR\Method\CLRMethod.cs" />
     <Compile Include="Assets\ThirdParty\ILRuntime\ILRuntime\CLR\Method\ExceptionHandler.cs" />
     <Compile Include="Assets\ThirdParty\ILRuntime\ILRuntime\CLR\Method\ILMethod.cs" />
@@ -566,6 +595,9 @@
     </Reference>
     <Reference Include="UnityEngine.HoloLens">
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="Debuger">
+      <HintPath>E:/Egametang/Unity/Assets/Plugins/Debuger.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib">
       <HintPath>E:/Egametang/Unity/Assets/Plugins/ICSharpCode.SharpZipLib.dll</HintPath>

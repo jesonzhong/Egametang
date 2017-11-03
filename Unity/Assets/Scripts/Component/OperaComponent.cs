@@ -36,6 +36,17 @@ namespace Model
 		        direction.Normalize();
 		        SessionComponent.Instance.Session.Send(new Frame_ClickMap() { X = (int)(direction.x * 1000), Z = (int)(direction.y * 1000) });
 	        }
+
+            //just for test
+            if (Input.GetMouseButtonDown(1))
+            {
+
+            }
+
+            if (Input.GetMouseButtonDown(0))
+            {
+
+            }
         }
     }
 }

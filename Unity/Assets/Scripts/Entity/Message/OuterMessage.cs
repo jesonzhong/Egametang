@@ -204,4 +204,17 @@ namespace Model
 	public class R2C_Ping: AResponse
 	{
 	}
+    
+    public class RankInfo
+    {
+        public long Id;
+        public string name;
+        public int score;
+    }
+
+    [Message(Opcode.Response_RankList)]
+    public class Response_RankList : AActorMessage
+    {
+        public List<RankInfo> Units = new List<RankInfo>();
+    }
 }

@@ -30,9 +30,11 @@
 		Frame_ClickMap = 2006,
 		Actor_CreateUnits = 2007,
 		Frame_ClickAction = 2008,
+        
+        Response_RankList = 3003,
 
-		// server inner opcode
-		ActorRequest = 1,
+    // server inner opcode
+    ActorRequest = 1,
 		ActorResponse = 2,
 		ActorRpcRequest = 3,
 		ActorRpcResponse = 4,

@@ -18,7 +18,7 @@ namespace Model
 				Unit unit = UnitFactory.Create(unitInfo.UnitId);
 				unit.Position = new Vector3(unitInfo.X / 1000f, 0, unitInfo.Z / 1000f);
 				unit.IntPos = new VInt3(unitInfo.X, 0, unitInfo.Z);
-
+				
 				if (PlayerComponent.Instance.MyPlayer.UnitId == unit.Id)
 				{
 					Game.Scene.GetComponent<CameraComponent>().Unit = unit;

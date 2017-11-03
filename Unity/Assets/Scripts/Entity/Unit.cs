@@ -18,6 +18,7 @@ namespace Model
 		public VInt3 IntPos;
 
 		public GameObject GameObject;
+        public GameObject HudGameObject;
 		
 		public void Awake()
 		{
@@ -53,6 +54,16 @@ namespace Model
 			{
 				return;
 			}
+
+            if (this.GameObject != null)
+            {
+                PoolManager.Despawn(this.GameObject);
+            }
+
+            if (this.HudGameObject != null)
+            {
+                PoolManager.Despawn(this.HudGameObject);
+            }
 
 			base.Dispose();
 		}
