@@ -1,0 +1,7 @@
+/AssetBundles | 0
+/Config | 0
+/Config/AllAB.json | 1|1.16
+/Logs | 0
+/Logs/Log-Client-Error.txt | 1|0.00
+/Logs/Log-Client-Info.txt | 1|0.25
+/version.txt | 1|0.00
