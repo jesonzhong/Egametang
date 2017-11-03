@@ -28,17 +28,12 @@ public class ControlStick : MonoBehaviour, IBeginDragHandler, IEndDragHandler, I
     public void OnBeginDrag(PointerEventData data)
     {
         isDragging = true;
-
-        Debug.Log("OnBeginDrag");
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         isDragging = false;
 
-        
-
-        Debug.Log("OnEndDrag");
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -93,13 +88,10 @@ public class ControlStick : MonoBehaviour, IBeginDragHandler, IEndDragHandler, I
         JoyStickBackground.transform.localPosition = localPoint;
         JoyStickBtn.transform.localPosition = Vector2.zero;
 
-        Debug.Log("OnPointerDown x: " + localPoint.x + " y: " + localPoint.y);
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        Debug.Log("OnPointerUp");
-
         JoyStickBackground.transform.localPosition = origPos;
         JoyStickBtn.transform.localPosition = Vector2.zero;
     }

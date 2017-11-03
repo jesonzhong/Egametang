@@ -8,12 +8,17 @@ using System.Collections;
 namespace Hotfix
 {
 	[ObjectEvent]
-	public class UIBattleMainComponentEvent : ObjectEvent<UIBattleMainComponent>, IAwake
+	public class UIBattleMainComponentEvent : ObjectEvent<UIBattleMainComponent>, IAwake, IUpdate
 	{
 		public void Awake()
 		{
 			this.Get().Awake();
 		}
+
+        public void Update()
+        {
+            this.Get().Update();
+        }
 	}
 	
 	public class UIBattleMainComponent: Component
@@ -37,7 +42,7 @@ namespace Hotfix
 
 
         //小地图
-        private List<GameObject> markList = new List<GameObject>();
+        private List<GameObject> imgList = new List<GameObject>();
 
 
         public void Awake()
@@ -80,6 +85,22 @@ namespace Hotfix
                 }
             }
 
+            //小地图
+            GameObject mapObj = rc.Get<GameObject>("map");
+            for (int i = 1; i <= 10; i++)
+            {
+                string cellName = "point/img" + i;
+                GameObject imgObj = mapObj.transform.Find(cellName).gameObject;
+                imgList.Add(imgObj);
+
+            }
+
+
+        }
+
+        public void Update()
+        {
+            ProcessMapPos();
         }
 
         public void PlayAnimation(string actName)
@@ -161,6 +182,29 @@ namespace Hotfix
             for (int j=i; j<10; ++j)
             {
                 rankList[j].SetActive(false);
+            }
+        }
+
+        //处理小地图位置
+        public void ProcessMapPos()
+        {
+            Unit[] units = UnitComponent.Instance.GetAll();
+            int i = 0;
+            foreach (Unit u in units)
+            {
+                if (i < 10)
+                {
+                    imgList[i].SetActive(true);
+                    Vector3 v3 = u.Position;
+                    imgList[i].GetComponent<RectTransform>().anchoredPosition = new Vector3(v3.x/200.0f*205.0f, v3.z/200.0f*205.0f, 0);
+                }
+
+                i++;
+            }
+
+            for (int j = i; j < 10; ++j)
+            {
+                imgList[j].SetActive(false);
             }
         }
 
