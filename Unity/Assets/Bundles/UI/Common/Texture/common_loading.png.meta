@@ -1,0 +1,461 @@
+fileFormatVersion: 2
+guid: fc7432975a40b4540aede9c1970b411b
+timeCreated: 1502877556
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Common_Image_loadingjintutiaodi
+    21300002: Common_Image_tianchong
+    21300004: Common_Image_dengdai
+    21300006: Common_Image_jifenmoshi
+    21300008: Common_Image_luandoumoshi
+    21300010: Common_Image_youbian
+    21300012: Common_Image_zuobian
+    21300014: Common_Image_liangyuan
+    21300016: Common_Image_liangyuandi
+    21300018: Common_Image_yuangou
+    21300020: Common_Image_yuanquangezi
+    21300022: bg_title_accouplements
+    21300024: Common_Image_degree_accouplements
+    21300026: Common_Image_light_accouplements
+    21300028: Common_Image_speed_accouplements
+    21300030: Common_Image_time_accouplements
+    21300032: Common_Image_left
+    21300034: Common_Image_right
+    21300036: Common_Image_roundtime
+    21300038: Common_Image_dadi
+    21300040: Common_Image_dadizi
+    21300042: Common_Image_VS
+    21300044: Common_Image_weijiazai
+    21300046: Common_Image_xiaodi
+    21300048: Common_Image_yijiazai
+    21300050: Common_Image_zhongdi
+    21300052: Common_Image_zhongjian
+    21300054: Common_Image_ziji
+    21300056: Common_Image_zuduidi
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: bg_title_accouplements
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 66
+        width: 1024
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_dadi
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 511
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_dadizi
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 5
+        width: 50
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_degree_accouplements
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 9
+        width: 1024
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_dengdai
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 18
+        width: 38
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_jifenmoshi
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 207
+        width: 249
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_left
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 275
+        width: 234
+        height: 234
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_liangyuan
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 567
+        width: 221
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_liangyuandi
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 9
+        width: 157
+        height: 157
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_light_accouplements
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 28
+        width: 6
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_luandoumoshi
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 208
+        width: 249
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_right
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 276
+        width: 234
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_roundtime
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 275
+        width: 234
+        height: 234
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_speed_accouplements
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 57
+        width: 1024
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_tianchong
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 19
+        width: 479
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_VS
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 200
+        width: 384
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_weijiazai
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 21
+        width: 42
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_xiaodi
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 168
+        width: 341
+        height: 341
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_yijiazai
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 21
+        width: 42
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_yuangou
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 57
+        width: 109
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_yuanquangezi
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 37
+        width: 80
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_zhongdi
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 511
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_zhongjian
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 790
+        width: 234
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_ziji
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 507
+        width: 58
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_zuduidi
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 7
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: assets/bundles/ui/common/texture/common_loading.img
+  assetBundleVariant: 

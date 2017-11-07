@@ -272,7 +272,7 @@ public class BuildWindow : EditorWindow
 
 public class BuildUtil
 {
-    static string[] levels = { "Assets/Scenes/Init.unity" };
+    static string[] levels = { "Assets/Scenes/launcher.unity" };
 
     static public string getPath() 
     {
@@ -563,7 +563,7 @@ public class PatchUtil
 			int size = (int)fileStream.Length;
             string md5 = "";
             //是场景并且对应.manifest文件存在
-            if ((file.Contains("assets\\abres\\scene") || file.Contains("assets/abres/scene")) && (File.Exists(file + ".manifest")))
+            if ((file.Contains("assets\\bundles\\scene") || file.Contains("assets/bundles/scene")) && (File.Exists(file + ".manifest")))
             {
                 md5 = FileUtil.FetchMD5(file + ".manifest");
             }

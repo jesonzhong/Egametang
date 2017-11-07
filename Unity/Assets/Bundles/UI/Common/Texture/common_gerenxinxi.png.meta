@@ -1,0 +1,617 @@
+fileFormatVersion: 2
+guid: a83e3c1e4cc518446acedf51761f5c6c
+timeCreated: 1500003730
+licenseType: Pro
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Common_Image_dengjidi
+    21300002: Common_Image_dengjitubiao
+    21300004: Common_Image_lanquan
+    21300006: Common_Image_lvquan
+    21300008: Common_Image_num01
+    21300010: Common_Image_num02
+    21300012: Common_Image_num03
+    21300014: Common_Image_num04
+    21300016: Common_Image_num05
+    21300018: Common_Image_num06
+    21300020: Common_Image_num07
+    21300022: Common_Image_num08
+    21300024: Common_Image_num09
+    21300026: Common_Image_num10
+    21300028: Common_Image_bianji
+    21300030: Common_Image_huangquan
+    21300032: Common_Image_xinxin
+    21300034: Common_Image_youcedi
+    21300036: Common_Image_siliaoxiao
+    21300038: Maininterface_Btn_bantouanniu
+    21300040: Common_Image_winrate_infor
+    21300042: Common_Image_blue_short
+    21300044: Common_Image_data_amply
+    21300046: Common_Image_data_core
+    21300048: Common_Image_delimit_card
+    21300050: Common_Image_drop_card
+    21300052: Common_Image_heart_card
+    21300054: Common_Image_id_card
+    21300056: Common_Image_infor_pop
+    21300058: Common_Image_inform_card
+    21300060: Common_Image_name_card
+    21300062: Common_Image_title_data
+    21300064: Common_Image_yellow_short
+    21300066: Common_Image_bluebasic
+    21300068: Common_Image_inforbasic
+    21300070: Common_Image_roundbasic
+    21300072: Common_Image_yellowbasic
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: -2
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: 2
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Common_Image_bianji
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 799
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_blue_short
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 1021
+        width: 17
+        height: 2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_bluebasic
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 894
+        width: 86
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_data_amply
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 413
+        width: 70
+        height: 19
+      alignment: 9
+      pivot: {x: 0.62857145, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_data_core
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 515
+        width: 185
+        height: 129
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_delimit_card
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 767
+        width: 49
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_dengjidi
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 654
+        width: 122
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_dengjitubiao
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 833
+        width: 39
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_drop_card
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 773
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_heart_card
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 778
+        width: 127
+        height: 127
+      alignment: 9
+      pivot: {x: 0.4606299, y: 0.515748}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_huangquan
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 464
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_id_card
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 649
+        width: 57
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 31, y: 0, z: 12, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_infor_pop
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 509
+        width: 180
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 79, y: 0, z: 70, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_inforbasic
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 584
+        width: 77
+        height: 67
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 26, y: 25, z: 25, w: 25}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_inform_card
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 872
+        width: 42
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 8, y: 0, z: 19, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_lanquan
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 389
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_lvquan
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 423
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_name_card
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 982
+        width: 357
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_num01
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 755
+        width: 82
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_num02
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 704
+        width: 82
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_num03
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 653
+        width: 82
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_num04
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 509
+        width: 72
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_num05
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 479
+        width: 72
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_num06
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 449
+        width: 72
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_num07
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 419
+        width: 72
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_num08
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 434
+        width: 72
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_num09
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 434
+        width: 72
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_num10
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 407
+        width: 72
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_roundbasic
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 907
+        width: 129
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_siliaoxiao
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 742
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_title_data
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 539
+        width: 76
+        height: 2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_winrate_infor
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 646
+        width: 245
+        height: 334
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_xinxin
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 543
+        width: 120
+        height: 109
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_yellow_short
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 1017
+        width: 17
+        height: 2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Common_Image_yellowbasic
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 806
+        width: 86
+        height: 86
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: assets/bundles/ui/common/texture/common_gerenxinxi.img
+  assetBundleVariant: 

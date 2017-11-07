@@ -18,6 +18,7 @@
         "Assets/Bundles/UI/UIBattleMain",
         "Assets/Bundles/UI/UILobby",
         "Assets/Bundles/UI/UILogin",
-        "Assets/Bundles/UI/Menu/Rank"
+        "Assets/Bundles/UI/Menu/Rank",
+        "Assets/Bundles/UI/Menu/UI_Updatetip"
     ]
 }

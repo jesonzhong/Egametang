@@ -103,7 +103,7 @@ public class EnvCheckInit : UEventEmitter
                 //预加载完成跳到登陆界面
                 AssetBundleLoader.Instance.LoadLevelAsset("login", () =>
                 {
-                    AssetBundleManager.UnloadAssetBundle("assets/abres/scene/updater", true);
+                    AssetBundleManager.UnloadAssetBundle("assets/bundles/scene/updater", true);
 
                     //UGuiManager.Initialize();
                     //GiantMobileManager.Instance.Init();
@@ -372,27 +372,10 @@ public class EnvCheckInit : UEventEmitter
 
     public void GameInit()
     {
-#if RELEASE_VER
-        bool delayFlag = false;
-        Action LuaManager_Initialize = () =>
+        AssetBundleLoader.Instance.LoadLevelAsset("main", () =>
         {
-            if (!delayFlag)
-            {
-                delayFlag = true;
-                LuaManager.Initialize();
-            }
-
-        };
-
-        DelayManager.instance.delay(3f, LuaManager_Initialize);
-        NoticeLoader.Instance.Load(LuaManager_Initialize);
-#else
-		
-#endif
-
-        ////////////////////////////////////////////
-        //SDK init
-        SDKInit();
+            //AssetBundleManager.UnloadAssetBundle("assets/bundles/scene/login", true);
+        });
     }
 
     public void SDKInit()
@@ -412,7 +395,7 @@ public class EnvCheckInit : UEventEmitter
         {
             AssetBundleLoader.Instance.LoadLevelAsset("main", () =>
             {
-                //AssetBundleManager.UnloadAssetBundle("assets/abres/scene/login", true);
+                //AssetBundleManager.UnloadAssetBundle("assets/bundles/scene/login", true);
             });
         }
     }

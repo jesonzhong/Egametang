@@ -56,7 +56,7 @@ namespace MyEditor
 			BuildAssetBundlesPC();
 
 			string[] levels2 = {
-				"Assets/Scenes/Init.unity",
+                "Assets/Scenes/launcher.unity",
 			};
 			BuildPipeline.BuildPlayer(levels2, $"{relativeDirPrefix}/et.exe", BuildTarget.StandaloneWindows, option);
 			Log.Info("打包完成");
@@ -68,7 +68,7 @@ namespace MyEditor
 			BuildAssetBundlesAndroid();
 
 			string[] levels2 = {
-				"Assets/Scenes/Init.unity",
+                "Assets/Scenes/launcher.unity",
 			};
 			BuildPipeline.BuildPlayer(levels2, $"{relativeDirPrefix}/et.apk", BuildTarget.Android, option);
 			Log.Info("打包完成");
@@ -78,7 +78,7 @@ namespace MyEditor
 		public static void BuildAPK()
 		{
 			string[] levels2 = {
-				"Assets/Scenes/Init.unity",
+                "Assets/Scenes/launcher.unity",
 			};
 			BuildPipeline.BuildPlayer(levels2, $"{relativeDirPrefix}/et.apk", BuildTarget.Android, option);
 			Log.Info("打包APK完成");

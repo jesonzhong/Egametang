@@ -105,7 +105,9 @@ public class AssetUpdater : MonoBehaviour
 	/// </summary>
 	public void CheckVersionWithServer()
 	{
-		if (EnvCheckInit.NeedSyncWithServer)
+        //*****临时
+        EnvCheckInit.NeedSyncWithServer = true;
+        if (EnvCheckInit.NeedSyncWithServer)
 		{
 			StartCoroutine(getServerVersion());
 		}
@@ -153,7 +155,7 @@ public class AssetUpdater : MonoBehaviour
 		yield return www;
 		if (!string.IsNullOrEmpty(www.error))
 		{
-			//UpdateTip.Instance.Show();
+			UpdateTip.Instance.Show();
 		}
 		//下载更新包
 		else
