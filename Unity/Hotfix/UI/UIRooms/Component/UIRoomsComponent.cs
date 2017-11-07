@@ -96,6 +96,12 @@ namespace Hotfix
             
             Hotfix.Scene.GetComponent<UIComponent>().Remove(UIType.Rooms);
             Hotfix.Scene.GetComponent<UIComponent>().Create(UIType.BattleMain);
+            if (g2CCreateRoom.AgoFrameMessage != null)
+            {
+                Game.Scene.GetComponent<ClientFrameComponent>().SetAgoFrameMessage(g2CCreateRoom.AgoFrameMessage);
+            }
         }
+        
+        
     }
 }

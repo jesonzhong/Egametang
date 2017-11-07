@@ -129,6 +129,7 @@ namespace Model
     {
         [ProtoMember(1)]
         public long[] UnitIds;
+        public FrameMessage AgoFrameMessage;
     }
     
 

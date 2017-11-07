@@ -8,7 +8,7 @@ namespace Model
 		protected override void Run(Actor_CreateUnits message)
 		{
 			UnitComponent unitComponent = Game.Scene.GetComponent<UnitComponent>();
-			
+            bool fristCreate = false;
 			foreach (UnitInfo unitInfo in message.Units)
 			{
 				if (unitComponent.Get(unitInfo.UnitId) != null)
@@ -21,10 +21,15 @@ namespace Model
 				
 				if (PlayerComponent.Instance.MyPlayer.UnitId == unit.Id)
 				{
-					Game.Scene.GetComponent<CameraComponent>().Unit = unit;
+                    fristCreate = true;
+                    Game.Scene.GetComponent<CameraComponent>().Unit = unit;
 					Game.Scene.AddComponent<OperaComponent>();
 				}
 			}
+            if (fristCreate)
+            {
+                Game.Scene.GetComponent<ClientFrameComponent>().QuickHandleFrameMessage();
+            }
 		}
 	}
 }

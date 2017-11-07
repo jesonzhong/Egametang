@@ -21,6 +21,8 @@
 
         public const int maxWaitTime = 40;
 
+        private bool Quicking = false;
+
         public void Start()
         {
             UpdateAsync();
@@ -61,7 +63,7 @@
 
         private void UpdateFrame()
         {
-            if (this.Queue.Count == 0)
+            if (this.Queue.Count == 0 || Quicking)
             {
                 return;
             }
@@ -74,6 +76,28 @@
                 Opcode opcode = Game.Scene.GetComponent<OpcodeTypeComponent>().GetOpcode(message.GetType());
                 Game.Scene.GetComponent<MessageDispatherComponent>().Handle(new MessageInfo() { Opcode= opcode, Message = message });
             }
+        }
+
+        private FrameMessage agoFrameMessage;
+        public void SetAgoFrameMessage(FrameMessage frameMessage)
+        {
+            agoFrameMessage = frameMessage;
+            Quicking = true;
+        }
+
+        public void QuickHandleFrameMessage()
+        {
+            if (agoFrameMessage == null)
+                return;
+            this.Frame = agoFrameMessage.Frame;
+            for (int i = 0; i < agoFrameMessage.Messages.Count; ++i)
+            {
+                AFrameMessage message = agoFrameMessage.Messages[i];
+                Opcode opcode = Game.Scene.GetComponent<OpcodeTypeComponent>().GetOpcode(message.GetType());
+                Game.Scene.GetComponent<MessageDispatherComponent>().Handle(new MessageInfo() { Opcode = opcode, Message = message });
+            }
+            agoFrameMessage = null;
+            Quicking = false;
         }
     }
 }

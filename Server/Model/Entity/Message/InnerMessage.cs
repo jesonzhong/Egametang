@@ -28,4 +28,5 @@ using System.Collections.Generic;using MongoDB.Bson.Serialization.Attributes;
     public class M2G_JoinMatchRoom : AResponse
     {
         public long[] UnitIds;
+        public FrameMessage AgoFrameMessage;
     }}

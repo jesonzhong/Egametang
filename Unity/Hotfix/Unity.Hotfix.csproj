@@ -92,12 +92,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Event\" />
-    <Folder Include="Handler\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Assembly-CSharp.csproj">
-      <Project>{cd8c9303-404b-fb8d-6b9b-21988d5cac0a}</Project>
-      <Name>Assembly-CSharp</Name>
+    <ProjectReference Include="..\Unity.csproj">
+      <Project>{cf118143-7e37-744f-be45-3f55345fec40}</Project>
+      <Name>Unity</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

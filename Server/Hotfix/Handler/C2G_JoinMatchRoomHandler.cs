@@ -16,8 +16,8 @@ namespace Hotfix
 				string mapAddress = Game.Scene.GetComponent<StartConfigComponent>().MapConfigs[0].GetComponent<InnerConfig>().Address;
 				Session mapSession = Game.Scene.GetComponent<NetInnerComponent>().Get(mapAddress);
                 M2G_JoinMatchRoom joinRoom = await mapSession.Call<M2G_JoinMatchRoom>(new G2M_JoinMatchRoom() { RoomId = message.RoomId, UnitId = player.UnitId, GateSessionId = session.Id });
-				
-				response.UnitIds = joinRoom.UnitIds;
+                response.AgoFrameMessage = joinRoom.AgoFrameMessage;
+                response.UnitIds = joinRoom.UnitIds;
 				reply(response);
 			}
 			catch (Exception e)

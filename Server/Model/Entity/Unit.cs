@@ -44,7 +44,7 @@ namespace Model
                 MatchRoom matchroom = roomComponent.Get(RoomID);
                 if (matchroom != null)
                 {
-                    matchroom.Remove(this.Id);
+                    matchroom.unitComponent.Remove(this.Id);
                 }
             }
 

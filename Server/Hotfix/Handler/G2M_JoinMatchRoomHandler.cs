@@ -23,9 +23,9 @@ namespace Hotfix
                 unit.AddComponent<UnitGateComponent, long>(message.GateSessionId);
                 //Game.Scene.GetComponent<UnitComponent>().Add(unit);
                 unit.RoomID = matchroom.Id;
-                matchroom.Add(unit);
+                matchroom.unitComponent.Add(unit);
 
-                Unit[] units = matchroom.GetAll();
+                Unit[] units = matchroom.unitComponent.GetAll();
 
                 response.UnitIds = new long[units.Length];
 
@@ -45,6 +45,12 @@ namespace Hotfix
                 Log.Debug($"{MongoHelper.ToJson(actorCreateUnits)}");
                 MessageHelper.Broadcast(actorCreateUnits, units);
                 MessageHelper.Broadcast(retRankList, units);
+                if (matchroom.Frame > 0)
+                {
+                    response.AgoFrameMessage = matchroom.cacheFrameMessage;
+                    response.AgoFrameMessage.Frame = matchroom.Frame;
+                }
+                
                 reply(response);
 			}
 			catch (Exception e)
