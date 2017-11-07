@@ -226,10 +226,7 @@ public class BuildWindow : EditorWindow
                     case TargetPlatform.IOS:
                         BuildUtil.buildIOS();
                         //清理并生成指纹数据
-                        if (curSelect == 1)
-                        {
-                             BuildUtility.CleanAndGenFileList();
-                        }
+                        BuildUtility.CleanAndGenFileList();
                             
                         break;
                     case TargetPlatform.Window:
@@ -238,10 +235,8 @@ public class BuildWindow : EditorWindow
                         break;
                     case TargetPlatform.Android:
                         BuildUtil.buildAndroid();
-                        if (curSelect == 1)
-                        {
-                            BuildUtility.CleanAndGenFileList();
-                        }
+                        BuildUtility.CleanAndGenFileList();
+
                         break;
                 }
             }

@@ -236,7 +236,7 @@ public class AssetDownloader
 
 	public void downloadUrl(string url)
 	{
-		_curFileCount++;
+        _curFileCount++;
 
 		Uri uri = new Uri(url, UriKind.Absolute);
 
@@ -244,8 +244,8 @@ public class AssetDownloader
 
 		_webClient.DownloadFileAsync(uri, tmpFile, tmpFile);
 
-		Debug.Log ("++++ downloading url: " + uri.ToString());
-	}
+        Debug.Log("@@@++++ downloading url: " + uri.ToString());
+    }
 
 	/// <summary>
 	/// 下载完成回调
@@ -254,30 +254,31 @@ public class AssetDownloader
 	/// <param name="e"></param>
 	void onDownloadCompelete(object sender, AsyncCompletedEventArgs e)
 	{
+        Debug.Log("@@@ onDownloadCompelete");
 		if (e.Error == null && !e.Cancelled)
 		{
-			FileUtil.DecompressToDirectory(_upzipPath,e.UserState.ToString());
-			File.Delete (e.UserState.ToString());
+            FileUtil.DecompressToDirectory(_upzipPath,e.UserState.ToString());
+            File.Delete (e.UserState.ToString());
 
-			if (_fileQueue.Count > 0)
+            if (_fileQueue.Count > 0)
 			{
-				downloadUrl(_fileQueue.Dequeue());
+                downloadUrl(_fileQueue.Dequeue());
 			}
 			else
 			{
 				lock (AssetDownloader.WebLock)
 				{
-					bFinished = true;
+                    bFinished = true;
 				}
 			}
 		}
 		else
 		{
-			_webClient.CancelAsync();
+            _webClient.CancelAsync();
 			bFinished = true;
 		}
 
-		File.Delete(e.UserState.ToString());
+        File.Delete(e.UserState.ToString());
 
 	}
 
@@ -289,12 +290,12 @@ public class AssetDownloader
 
 	private void onDownloadProcess(object sender, DownloadProgressChangedEventArgs e)
 	{
-		Debug.Log(string.Format("received: {0} total: ", e.BytesReceived, e.TotalBytesToReceive));
+		Debug.Log(string.Format("@@@received: {0} total: ", e.BytesReceived, e.TotalBytesToReceive));
 		lock (AssetDownloader.WebLock)
 		{
 			Loaded = e.BytesReceived;
 			Total = e.TotalBytesToReceive;
-		}
+        }
 	}
 }
 
