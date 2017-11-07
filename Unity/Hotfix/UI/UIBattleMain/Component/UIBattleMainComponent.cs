@@ -140,14 +140,11 @@ namespace Hotfix
         public void OnCommonAttack()
         {
             SessionComponent.Instance.Session.Send(new Request_UseSkill() { Id = PlayerComponent.Instance.MyPlayer.UnitId, skillId = 1 });
-
-            Log.Debug("OnCommonAttack");
         }
 
         public void OnSkill1()
         {
             SessionComponent.Instance.Session.Send(new Request_UseSkill() { Id = PlayerComponent.Instance.MyPlayer.UnitId, skillId = 2 });
-            Log.Debug("OnSkill1");
 
             //DisposeEffect();
         }
@@ -155,13 +152,11 @@ namespace Hotfix
         public void OnSkill2()
         {
             SessionComponent.Instance.Session.Send(new Request_UseSkill() { Id = PlayerComponent.Instance.MyPlayer.UnitId, skillId = 3 });
-            Log.Debug("OnSkill2");
         }
 
         public void OnSkill3()
         {
             SessionComponent.Instance.Session.Send(new Request_UseSkill() { Id = PlayerComponent.Instance.MyPlayer.UnitId, skillId = 4 });
-            Log.Debug("OnSkill3");
         }
 
         public void ProcessRankList(Response_RankList message)
