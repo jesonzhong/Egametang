@@ -266,13 +266,14 @@ public class Packager
             string assetPath = filePath.Replace(Application.dataPath, "Assets");
       
             AssetImporter import = AssetImporter.GetAtPath(assetPath);
+
             if (import != null)
             {
                 MarkBundleEnum markEnum = GetMarkType(assetPath);
                 switch(markEnum)
                 {
                     case MarkBundleEnum.ONLY_PREFAB:
-                        if (!ext.Equals(".cs") && !ext.Equals(".prefab"))
+                        if (!ext.Equals(".bytes") && !ext.Equals(".cs") && !ext.Equals(".prefab"))
                         {
                             import.assetBundleName = "";
                             continue;
@@ -311,7 +312,7 @@ public class Packager
                         break;
                 }
 
-                if (ext.Equals(".prefab") || ext.Equals(".png") || ext.Equals(".mat") || ext.Equals(".unity") || ext.Equals(".fbx") || ext.Equals(".tga") || ext.Equals(".mp3") || ext.Equals(".wav") || ext.Equals(".ttf") || ext.Equals(".otf") || ext.Equals(".anim") || ext.Equals(".controller"))
+                if (ext.Equals(".bytes") || ext.Equals(".prefab") || ext.Equals(".png") || ext.Equals(".mat") || ext.Equals(".unity") || ext.Equals(".fbx") || ext.Equals(".tga") || ext.Equals(".mp3") || ext.Equals(".wav") || ext.Equals(".ttf") || ext.Equals(".otf") || ext.Equals(".anim") || ext.Equals(".controller"))
                 {
                     if (!ext.Equals(".png"))
                     {
@@ -407,5 +408,6 @@ public class Packager
 		process.WaitForExit();
 		process.Close();
 	}
+
 }
 

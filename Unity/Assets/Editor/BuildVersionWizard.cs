@@ -110,6 +110,7 @@ public class BuildWindow : EditorWindow
         // =========================== 3. 标记AB资源   ===========================
         if (GUILayout.Button("标记AB", GUILayout.Height(30)))
         {
+            BuildUtility.copyDllRes();
             Packager.BuildAssetMarks();
             Packager.WritePreloadFile();
         }
@@ -969,6 +970,15 @@ public class BuildUtility
     public static void OnBuildIPA()
     {
         IPABuilder.buildIPA();
+    }
+
+
+    static public void copyDllRes()
+    {
+        File.Copy(Application.dataPath + "/Res/Code/Hotfix.dll.bytes", Application.dataPath + "/Bundles/Code/Hotfix.dll.bytes", true);
+        File.Copy(Application.dataPath + "/Res/Code/Hotfix.mdb.bytes", Application.dataPath + "/Bundles/Code/Hotfix.mdb.bytes", true);
+
+        AssetDatabase.Refresh();
     }
 
 }
