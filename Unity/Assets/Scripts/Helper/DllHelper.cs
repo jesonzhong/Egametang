@@ -27,15 +27,49 @@ namespace Model
 #else
 		public static Assembly LoadHotfixAssembly()
 		{
-			GameObject code = (GameObject)Resources.Load("Code");
-			byte[] assBytes = code.Get<TextAsset>("Hotfix.dll").bytes;
-			byte[] mdbBytes = code.Get<TextAsset>("Hotfix.mdb").bytes;
-			Assembly assembly = Assembly.Load(assBytes, mdbBytes);
-			return assembly;
-		}
+#if UNITY_EDITOR
+            GameObject code = (GameObject)Resources.Load("Code");
+            byte[] assBytes = code.Get<TextAsset>("Hotfix.dll").bytes;
+            byte[] mdbBytes = code.Get<TextAsset>("Hotfix.mdb").bytes;
+            Assembly assembly = Assembly.Load(assBytes, mdbBytes);
+            return assembly;
+#else
+            byte[] assBytes = null;
+            byte[] mdbBytes = null;
+
+            string url = Application.streamingAssetsPath + "/AssetBundles/" + SysUtil.GetPlatformName() + "/assets/bundles/code/hotfix.dll";
+            if (EnvCheckInit.NeedSyncWithServer)
+            {
+                string updateDir = Application.persistentDataPath + "/AssetBundles/" + SysUtil.GetPlatformName() + "/assets/bundles/code/hotfix.dll";
+                if (File.Exists(updateDir))
+                {
+                    url = updateDir;
+                }
+            }
+            AssetBundle ab = AssetBundle.LoadFromFile(url);
+            if (ab != null)
+            {
+                UnityEngine.Object[] objs = ab.LoadAllAssets();
+                if (objs.Length == 0)
+                {
+                    SampleDebuger.LogError("Load hotfix.dll error");
+                    return null;
+                }
+
+                TextAsset txt = objs[0] as TextAsset;
+
+                //获取二进制数据的字节数组
+                assBytes = txt.bytes;
+            }
+            Assembly assembly = Assembly.Load(assBytes, mdbBytes);
+            return assembly;
 #endif
 
-		public static Type[] GetHotfixTypes()
+
+        }
+#endif
+
+        public static Type[] GetHotfixTypes()
 		{
 #if ILRuntime
 			ILRuntime.Runtime.Enviorment.AppDomain appDomain = Init.Instance.AppDomain;
