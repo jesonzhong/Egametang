@@ -18,7 +18,7 @@ namespace Model
 
 		public Player MyPlayer;
 		
-		private readonly Dictionary<long, Player> idPlayers = new Dictionary<long, Player>();
+		private readonly Dictionary<string, Player> idPlayers = new Dictionary<string, Player>();
 
 		public void Awake()
 		{
@@ -27,18 +27,18 @@ namespace Model
 		
 		public void Add(Player player)
 		{
-			this.idPlayers.Add(player.Id, player);
+			this.idPlayers.Add(player.Account, player);
 		}
 
-		public Player Get(long id)
+		public Player Get(string account)
 		{
-			this.idPlayers.TryGetValue(id, out Player gamer);
+			this.idPlayers.TryGetValue(account, out Player gamer);
 			return gamer;
 		}
 
-		public void Remove(long id)
+		public void Remove(string account)
 		{
-			this.idPlayers.Remove(id);
+			this.idPlayers.Remove(account);
 		}
 
 		public int Count

@@ -35,6 +35,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\Library\ScriptAssemblies\Assembly-CSharp.dll</HintPath>
+    </Reference>
     <Reference Include="Assembly-CSharp-firstpass">
       <HintPath>..\Library\ScriptAssemblies\Assembly-CSharp-firstpass.dll</HintPath>
     </Reference>
@@ -92,12 +95,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Event\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Unity.csproj">
-      <Project>{cf118143-7e37-744f-be45-3f55345fec40}</Project>
-      <Name>Unity</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

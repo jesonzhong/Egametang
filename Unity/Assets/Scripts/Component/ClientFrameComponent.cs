@@ -68,6 +68,8 @@
                 return;
             }
             FrameMessage frameMessage = this.Queue.Dequeue();
+            if (frameMessage.Frame <= this.Frame)
+                return;
             this.Frame = frameMessage.Frame;
 
             for (int i = 0; i < frameMessage.Messages.Count; ++i)

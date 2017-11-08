@@ -13,17 +13,33 @@ namespace Hotfix
 			{
                 MatchRoomComponent roomComponent = Game.Scene.GetComponent<MatchRoomComponent>();
                 MatchRoom matchroom = roomComponent.Get(message.RoomId);
-                
-                Unit unit = Game.Scene.GetComponent<UnitComponent>().Get(message.UnitId);
+
+                Unit unit = matchroom.unitComponent.Get(message.UnitId);
                 if (unit == null)
                 {
-                    unit = EntityFactory.CreateWithId<Unit>(message.UnitId);
+                    if(message.UnitId >0)
+                        unit = EntityFactory.CreateWithId<Unit>(message.UnitId);
+                    else
+                        unit = EntityFactory.Create<Unit>();
+                    
+                    
+                    unit.RoomID = matchroom.Id;
+                    matchroom.unitComponent.Add(unit);
                 }
-                await unit.AddComponent<ActorComponent, IEntityActorHandler>(new MapUnitEntityActorHandler()).AddLocation();
+                UnitGateComponent unitGateComponent = unit.GetComponent<UnitGateComponent>();
+                if (unitGateComponent != null)
+                {
+                    Game.Scene.GetComponent<ActorProxyComponent>().Remove(unitGateComponent.GateSessionId);
+                    unit.RemoveComponent<UnitGateComponent>();
+                    ActorComponent actorComponent = unit.GetComponent<ActorComponent>();
+                    await actorComponent.RemoveLocation();
+                    unit.RemoveComponent<ActorComponent>();
+                }
+                
                 unit.AddComponent<UnitGateComponent, long>(message.GateSessionId);
+                await unit.AddComponent<ActorComponent, IEntityActorHandler>(new MapUnitEntityActorHandler()).AddLocation();
+
                 //Game.Scene.GetComponent<UnitComponent>().Add(unit);
-                unit.RoomID = matchroom.Id;
-                matchroom.unitComponent.Add(unit);
 
                 Unit[] units = matchroom.unitComponent.GetAll();
 

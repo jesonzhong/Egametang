@@ -33,7 +33,7 @@ namespace Model
 				}
 
 				base.Dispose();
-
+               
 				Game.Scene.GetComponent<ActorManagerComponent>().Remove(actorId);
 			}
 			catch (Exception)

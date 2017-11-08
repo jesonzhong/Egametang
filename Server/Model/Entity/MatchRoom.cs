@@ -17,7 +17,6 @@ namespace Model
         public int Frame;
         public FrameMessage cacheFrameMessage;
         public FrameMessage FrameMessage;
-        private readonly Dictionary<long, Unit> idUnits = new Dictionary<long, Unit>();
         public UnitComponent unitComponent;
         public void Awake()
         {

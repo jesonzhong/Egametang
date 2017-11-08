@@ -11,10 +11,17 @@ namespace Hotfix
 			M2G_CreateUnit response = new M2G_CreateUnit();
 			try
 			{
-				Unit unit = EntityFactory.Create<Unit>();
+                Unit unit = Game.Scene.GetComponent<UnitComponent>().Get(message.UnitId);
+                if (unit == null)
+                {
+                    if (message.UnitId > 0)
+                        unit = EntityFactory.CreateWithId<Unit>(message.UnitId);
+                    else
+                        unit = EntityFactory.Create<Unit>();
+                    Game.Scene.GetComponent<UnitComponent>().Add(unit);
+                }
 				//await unit.AddComponent<ActorComponent, IEntityActorHandler>(new MapUnitEntityActorHandler()).AddLocation();
 				//unit.AddComponent<UnitGateComponent, long>(message.GateSessionId);
-				Game.Scene.GetComponent<UnitComponent>().Add(unit);
 				response.UnitId = unit.Id;
                 response.Count = Game.Scene.GetComponent<UnitComponent>().Count;
 				reply(response);

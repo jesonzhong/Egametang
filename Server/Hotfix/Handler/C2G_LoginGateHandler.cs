@@ -19,9 +19,15 @@ namespace Hotfix
 					reply(response);
 					return;
 				}
-				Player player = EntityFactory.Create<Player, string>(account);
-				Game.Scene.GetComponent<PlayerComponent>().Add(player);
-				session.AddComponent<SessionPlayerComponent>().Player = player;
+                PlayerComponent playerComponent = Game.Scene.GetComponent<PlayerComponent>();
+                Player player = playerComponent.Get(account);
+                if (player==null)
+                {
+                    player = EntityFactory.Create<Player, string>(account);
+                    playerComponent.Add(player);
+                }
+                playerComponent.MyPlayer = player;
+                session.AddComponent<SessionPlayerComponent>().Player = player;
 				await session.AddComponent<ActorComponent, IEntityActorHandler>(new GateSessionEntityActorHandler()).AddLocation();
 
 				response.PlayerId = player.Id;
