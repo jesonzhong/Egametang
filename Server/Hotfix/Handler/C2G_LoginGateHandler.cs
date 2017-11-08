@@ -19,14 +19,28 @@ namespace Hotfix
 					reply(response);
 					return;
 				}
+
+                
                 PlayerComponent playerComponent = Game.Scene.GetComponent<PlayerComponent>();
+                
+                
+
                 Player player = playerComponent.Get(account);
-                if (player==null)
+                if (player == null)
                 {
                     player = EntityFactory.Create<Player, string>(account);
                     playerComponent.Add(player);
                 }
-                playerComponent.MyPlayer = player;
+                else
+                {
+                    if (player.PlayerStatus == PlayerStatus.Online)
+                    {
+                        response.Error = ErrorCode.ERR_ConnectGateKeyError;
+                        response.Message = "已经在登陆状态!";
+                        reply(response);
+                        return;
+                    }
+                }
                 session.AddComponent<SessionPlayerComponent>().Player = player;
 				await session.AddComponent<ActorComponent, IEntityActorHandler>(new GateSessionEntityActorHandler()).AddLocation();
 

@@ -13,7 +13,7 @@
 
 			base.Dispose();
 
-			//Game.Scene.GetComponent<PlayerComponent>()?.Remove(this.Player.Account);
+			Game.Scene.GetComponent<PlayerComponent>()?.Leave(Player.Account);
 		}
 	}
 }

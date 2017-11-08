@@ -20,7 +20,7 @@ public class AssetBundleLoader : MonoBehaviour
     [SerializeField]
     public string sceneName;
 
-    private string sceneBundlePath = "assets/abres/scene/";
+    private string sceneBundlePath = "assets/bundles/scene/";
     private bool firstLoaded = false;
     private bool isResPreloaded = false;
 

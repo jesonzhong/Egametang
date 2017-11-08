@@ -1,0 +1,24 @@
+{
+    "fileList": [
+        "Assets/Bundles/Characters/CharacterTemplete",
+        "Assets/Bundles/Characters/HUD",
+        "Assets/Bundles/Characters/Avatar/prefab104/Avatar_104",
+        "Assets/Bundles/Effects/EffectCommonAttack",
+        "Assets/Bundles/Effects/EffectSkill1",
+        "Assets/Bundles/Effects/EffectSkill2",
+        "Assets/Bundles/Effects/EffectSkill3",
+        "Assets/Bundles/Effects/skill_104_x_dagger/skill_104_x_dagger_attack_2",
+        "Assets/Bundles/Effects/skill_104_x_dagger/skill_104_x_dagger_attack_3",
+        "Assets/Bundles/Effects/skill_104_x_dagger/skill_104_x_dagger_attack_4",
+        "Assets/Bundles/Effects/skill_104_x_dagger/skill_104_x_dagger_attack_5",
+        "Assets/Bundles/Effects/skill_104_x_dagger/skill_104_x_dagger_powerattack_1",
+        "Assets/Bundles/Effects/skill_104_x_dagger/skill_104_x_dagger_powerattack_2",
+        "Assets/Bundles/Effects/skill_104_x_dagger/skill_104_x_dagger_rush",
+        "Assets/Bundles/Effects/skill_104_x_dagger/skill_104_x_dagger_skill_2",
+        "Assets/Bundles/UI/UIBattleMain",
+        "Assets/Bundles/UI/UILobby",
+        "Assets/Bundles/UI/UILogin",
+        "Assets/Bundles/UI/Menu/Rank",
+        "Assets/Bundles/UI/Menu/UI_Updatetip"
+    ]
+}

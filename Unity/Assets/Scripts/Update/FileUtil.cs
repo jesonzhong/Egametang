@@ -137,10 +137,10 @@ public class FileUtil
 	public static void DecompressToDirectory (string targetPath, string zipFilePath)
 	{
 		if (File.Exists (zipFilePath)) {
-			var compressed = File.OpenRead (zipFilePath);
-			DecompressToDirectory (targetPath, compressed);
-		} else {
-			Debug.LogError ("Zip不存在: " + zipFilePath);
+            var compressed = File.OpenRead (zipFilePath);
+            DecompressToDirectory (targetPath, compressed);
+        } else {
+			Debug.LogError ("@@@Zip不存在: " + zipFilePath);
 		}
 	}
 
@@ -154,18 +154,19 @@ public class FileUtil
 		targetPath = Path.GetFullPath (targetPath);
 		ZipInputStream decompressor = new ZipInputStream (source);
 		ZipEntry entry;
-		SampleDebuger.Log ("DecompressToDirectory:  " + targetPath);
-		while ((entry = decompressor.GetNextEntry ()) != null) {
+		SampleDebuger.Log ("@@@DecompressToDirectory:  " + targetPath);
+		while ((entry = decompressor.GetNextEntry ()) != null)
+        {
 			string name = entry.Name;
 			if (entry.IsDirectory && entry.Name.StartsWith ("\\"))
 				name = ReplaceFirst (entry.Name, "\\", "");
 
-			string filePath = Path.Combine (targetPath, name);
+            string filePath = Path.Combine (targetPath, name);
 			string directoryPath = Path.GetDirectoryName (filePath);
 
-			if (!string.IsNullOrEmpty (directoryPath) && !Directory.Exists (directoryPath))
+            if (!string.IsNullOrEmpty (directoryPath) && !Directory.Exists (directoryPath))
 				Directory.CreateDirectory (directoryPath);
-			SampleDebuger.Log ("unziping directoryPath:  " + directoryPath);
+			SampleDebuger.Log ("@@@unziping directoryPath:  " + directoryPath);
 			if (entry.IsDirectory)
 				continue;
 
@@ -173,9 +174,9 @@ public class FileUtil
 			FileStream streamWriter = File.Create (filePath);
 			int bytesRead;
 			while ((bytesRead = decompressor.Read (data, 0, data.Length)) > 0) {
-				streamWriter.Write (data, 0, bytesRead);
+                streamWriter.Write (data, 0, bytesRead);
 			}
-			SampleDebuger.Log ("writing directoryPath:  " + directoryPath);
+			SampleDebuger.Log ("@@@writing directoryPath:  " + directoryPath);
 			streamWriter.Close ();
 		}
 		source.Close ();

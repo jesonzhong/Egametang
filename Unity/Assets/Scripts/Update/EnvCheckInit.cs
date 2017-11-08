@@ -21,11 +21,7 @@ public class EnvCheckInit : UEventEmitter
 
     public Image bottomImage;
 
-#if UNITY_EDITOR || !RELEASE_VER
-    static public bool NeedSyncWithLocal = true;
-    static public bool NeedSyncWithServer = false;
-
-#elif UNITY_STANDALONE_WIN
+#if UNITY_EDITOR
     static public bool NeedSyncWithLocal = true;
     static public bool NeedSyncWithServer = false;
 #else
@@ -103,7 +99,7 @@ public class EnvCheckInit : UEventEmitter
                 //预加载完成跳到登陆界面
                 AssetBundleLoader.Instance.LoadLevelAsset("login", () =>
                 {
-                    AssetBundleManager.UnloadAssetBundle("assets/abres/scene/updater", true);
+                    AssetBundleManager.UnloadAssetBundle("assets/bundles/scene/updater", true);
 
                     //UGuiManager.Initialize();
                     //GiantMobileManager.Instance.Init();
@@ -143,11 +139,12 @@ public class EnvCheckInit : UEventEmitter
         string path = Globals.wwwPersistenPath + "/version.txt";
         WWW www = new WWW(path);
         yield return www;
-        SampleDebuger.Log("version  = " + www.text);
+        www.text.Trim();
+        SampleDebuger.Log("@@@version  = " + www.text);
 
         if (string.IsNullOrEmpty(www.text))
         { //没读取到，是第一次安装，拷贝资源
-            SampleDebuger.Log("First Time Launch!");
+            SampleDebuger.Log("@@@First Time Launch!");
             //读取应用程序版本号
             www = new WWW(Globals.wwwStreamingPath + "/version.txt");
             yield return www;
@@ -157,7 +154,7 @@ public class EnvCheckInit : UEventEmitter
         }
         else
         { //已安装过
-            SampleDebuger.Log(" installed");
+            SampleDebuger.Log(" @@@installed");
             string oldVersion = www.text.Trim();       //读取当前旧版本号
 
             //读取应用程序版本号
@@ -167,6 +164,9 @@ public class EnvCheckInit : UEventEmitter
 
             //版本号小于安装程序中包含的版本号，删除旧资源再拷贝当前资源
 
+            Debug.Log("@@@========================================");
+            Debug.Log("@@@ oldVersion : " + oldVersion);
+            Debug.Log("@@@ currentVersion : " + currentVersion);
             GameVersion old_v = new GameVersion(oldVersion);
             GameVersion app_v = new GameVersion(currentVersion);
             if (old_v.IsLower(app_v))
@@ -372,27 +372,10 @@ public class EnvCheckInit : UEventEmitter
 
     public void GameInit()
     {
-#if RELEASE_VER
-        bool delayFlag = false;
-        Action LuaManager_Initialize = () =>
+        AssetBundleLoader.Instance.LoadLevelAsset("main", () =>
         {
-            if (!delayFlag)
-            {
-                delayFlag = true;
-                LuaManager.Initialize();
-            }
-
-        };
-
-        DelayManager.instance.delay(3f, LuaManager_Initialize);
-        NoticeLoader.Instance.Load(LuaManager_Initialize);
-#else
-		
-#endif
-
-        ////////////////////////////////////////////
-        //SDK init
-        SDKInit();
+            //AssetBundleManager.UnloadAssetBundle("assets/bundles/scene/login", true);
+        });
     }
 
     public void SDKInit()
@@ -412,7 +395,7 @@ public class EnvCheckInit : UEventEmitter
         {
             AssetBundleLoader.Instance.LoadLevelAsset("main", () =>
             {
-                //AssetBundleManager.UnloadAssetBundle("assets/abres/scene/login", true);
+                //AssetBundleManager.UnloadAssetBundle("assets/bundles/scene/login", true);
             });
         }
     }

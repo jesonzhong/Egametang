@@ -15,9 +15,7 @@ namespace Model
 	public class PlayerComponent : Component
 	{
 		public static PlayerComponent Instance { get; private set; }
-
-		public Player MyPlayer;
-		
+        
 		private readonly Dictionary<string, Player> idPlayers = new Dictionary<string, Player>();
 
 		public void Awake()
@@ -35,6 +33,13 @@ namespace Model
 			this.idPlayers.TryGetValue(account, out Player gamer);
 			return gamer;
 		}
+
+        public void Leave(string account)
+        {
+            Player player = Get(account);
+            if (player != null)
+                player.Leave();
+        }
 
 		public void Remove(string account)
 		{

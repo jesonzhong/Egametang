@@ -1,0 +1,12 @@
+/AssetBundles | 0
+/Config | 0
+/Config/AllAB.json | 1|1.21
+/Config/cfg_betaServerAPK.json | 1|0.27
+/Config/cfg_betaServerIOS.json | 1|0.27
+/Config/cfg_localServer.json | 1|0.27
+/Config/cfg_localServerAPK.json | 1|0.27
+/Config/cfg_localServerIOS.json | 1|0.27
+/Logs | 0
+/Logs/Log-Client-Error.txt | 1|0.00
+/Logs/Log-Client-Info.txt | 1|0.16
+/version.txt | 1|0.00

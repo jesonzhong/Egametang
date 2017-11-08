@@ -1,0 +1,9 @@
+{
+	"NoticeUrl":"http://163.44.168.18/notice/index.php",
+	"LoginServerIPArray":"163.44.168.18",
+	"LoginServerPort":7001,
+	"IMServerIP":"163.44.168.18",
+	"IMServerPort":8010,
+	"PatchUrl":"http://163.44.168.18/sxzs/sxzs_art_win",
+	"InstallUrl":"http://163.44.168.18/sxzs"
+}

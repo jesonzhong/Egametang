@@ -23,10 +23,10 @@ public static class Globals
 
         #if UNITY_ANDROID
         	Globals.wwwStreamingPath = Application.streamingAssetsPath;
-			Globals.wwwPersistenPath = "file:///" + Application.persistentDataPath; 
+			Globals.wwwPersistenPath = "file://" + Application.persistentDataPath; 
         #else
-            Globals.wwwStreamingPath = "file:///" + Application.streamingAssetsPath;
-            Globals.wwwPersistenPath = "file:///" + Application.persistentDataPath;
+            Globals.wwwStreamingPath = "file://" + Application.streamingAssetsPath;
+            Globals.wwwPersistenPath = "file://" + Application.persistentDataPath;
         #endif
     }
 
