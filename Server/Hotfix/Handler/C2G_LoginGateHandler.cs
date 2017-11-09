@@ -23,8 +23,6 @@ namespace Hotfix
                 
                 PlayerComponent playerComponent = Game.Scene.GetComponent<PlayerComponent>();
                 
-                
-
                 Player player = playerComponent.Get(account);
                 if (player == null)
                 {

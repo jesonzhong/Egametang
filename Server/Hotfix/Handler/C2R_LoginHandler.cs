@@ -19,9 +19,10 @@ namespace Hotfix
 				//}
                 
 				// 随机分配一个Gate
-				StartConfig config = Game.Scene.GetComponent<RealmGateAddressComponent>().GetAddress();
-				//Log.Debug($"gate address: {MongoHelper.ToJson(config)}");
-				string innerAddress = $"{config.GetComponent<InnerConfig>().Host}:{config.GetComponent<InnerConfig>().Port}";
+				StartConfig config = Game.Scene.GetComponent<RealmGateAddressComponent>().GetAddressByAccount(message.Account);
+                
+                //Log.Debug($"gate address: {MongoHelper.ToJson(config)}");
+                string innerAddress = $"{config.GetComponent<InnerConfig>().Host}:{config.GetComponent<InnerConfig>().Port}";
 				Session gateSession = Game.Scene.GetComponent<NetInnerComponent>().Get(innerAddress);
 
 				// 向gate请求一个key,客户端可以拿着这个key连接gate

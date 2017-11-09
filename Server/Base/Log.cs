@@ -1,4 +1,5 @@
-﻿namespace Model
+﻿
+namespace Model
 {
 	public static class Log
 	{
@@ -11,7 +12,8 @@
 
 		public static void Info(string message)
 		{
-			globalLog.Info(message);
+            //System.Console.Write(message);
+            globalLog.Info(message);
 		}
 
 		public static void Debug(string message)
@@ -21,7 +23,8 @@
 
 		public static void Error(string message)
 		{
-			globalLog.Error(message);
+            //System.Console.Write("error---->" + message);
+            globalLog.Error(message);
 		}
 	}
 }

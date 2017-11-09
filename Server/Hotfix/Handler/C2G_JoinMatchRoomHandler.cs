@@ -13,7 +13,7 @@ namespace Hotfix
 			{
 				Player player = session.GetComponent<SessionPlayerComponent>().Player;
 				// 在map服务器上创建战斗Unit
-				string mapAddress = Game.Scene.GetComponent<StartConfigComponent>().MapConfigs[0].GetComponent<InnerConfig>().Address;
+				string mapAddress = Game.Scene.GetComponent<StartConfigComponent>().Get(9).GetComponent<InnerConfig>().Address;
 				Session mapSession = Game.Scene.GetComponent<NetInnerComponent>().Get(mapAddress);
                 M2G_JoinMatchRoom joinRoom = await mapSession.Call<M2G_JoinMatchRoom>(new G2M_JoinMatchRoom() { RoomId = message.RoomId, UnitId = player.UnitId, GateSessionId = session.Id });
                 response.AgoFrameMessage = joinRoom.AgoFrameMessage;

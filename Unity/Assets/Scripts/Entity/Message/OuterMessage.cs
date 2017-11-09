@@ -151,7 +151,25 @@ namespace Model
 		public List<UnitInfo> Units = new List<UnitInfo>();
 	}
 
-	public struct FrameMessageInfo
+    public class RankInfo
+    {
+        [ProtoMember(1)]
+        public long Id;
+        [ProtoMember(2)]
+        public string name;
+        [ProtoMember(3)]
+        public int score;
+    }
+
+    [ProtoContract]
+    [Message(Opcode.Response_RankList)]
+    public class Response_RankList : AActorMessage
+    {
+        [ProtoMember(1)]
+        public List<RankInfo> Units = new List<RankInfo>();
+    }
+
+    public struct FrameMessageInfo
 	{
 		public long Id;
 		public AMessage Message;
@@ -205,17 +223,4 @@ namespace Model
 	public class R2C_Ping: AResponse
 	{
 	}
-    
-    public class RankInfo
-    {
-        public long Id;
-        public string name;
-        public int score;
-    }
-
-    [Message(Opcode.Response_RankList)]
-    public class Response_RankList : AActorMessage
-    {
-        public List<RankInfo> Units = new List<RankInfo>();
-    }
 }

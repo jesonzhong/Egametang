@@ -11,14 +11,10 @@ namespace Hotfix
             G2C_GetRoomList response = new G2C_GetRoomList();
 			try
 			{
-                MatchRoomComponent roomComponent = Game.Scene.GetComponent<MatchRoomComponent>();
-                MatchRoom[] rooms = roomComponent.GetAll();
-
-                response.RoomIds = new long[rooms.Length];
-                for (int i = 0; i < rooms.Length; i++)
-                {
-                    response.RoomIds[i] = rooms[i].Id;
-                }
+                string mapAddress = Game.Scene.GetComponent<StartConfigComponent>().Get(9).GetComponent<InnerConfig>().Address;
+                Session mapSession = Game.Scene.GetComponent<NetInnerComponent>().Get(mapAddress);
+                M2G_GetRoomList createUnit = await mapSession.Call<M2G_GetRoomList>(new G2M_GetRoomList() { });
+                response.RoomIds = createUnit.RoomIds;
                 reply(response);
 			}
 			catch (Exception e)

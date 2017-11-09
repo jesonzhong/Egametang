@@ -3,8 +3,8 @@
 	// 1000开始
 	public enum Opcode: ushort
 	{
-		FrameMessage = 1000,
-		C2R_Login = 1001,
+        FrameMessage = 1000,
+        C2R_Login = 1001,
 		R2C_Login = 1002,
 		R2C_ServerLog = 1003,
 		C2G_LoginGate = 1004,
@@ -31,6 +31,7 @@
 		Actor_CreateUnits = 2007,
 		Frame_ClickAction = 2008,
         
+
         Response_RankList = 3003,
 
     // server inner opcode
@@ -85,5 +86,9 @@
 
         G2M_JoinMatchRoom = 111,
         M2G_JoinMatchRoom = 112,
+
+        G2M_GetRoomList = 113,
+        M2G_GetRoomList = 114,
+        
     }
 }

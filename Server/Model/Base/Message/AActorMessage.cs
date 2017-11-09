@@ -8,10 +8,12 @@ namespace Model
 	[BsonKnownTypes(typeof(AFrameMessage))]
 	[BsonKnownTypes(typeof(Actor_CreateUnits))]
 	[BsonKnownTypes(typeof(FrameMessage))]
-	[ProtoInclude(10000, typeof(FrameMessage))]
+    [BsonKnownTypes(typeof(Response_RankList))]
+    [ProtoInclude(10000, typeof(FrameMessage))]
 	[ProtoInclude(10001, typeof(AFrameMessage))]
 	[ProtoInclude(10002, typeof(Actor_CreateUnits))]
-	public abstract class AActorMessage : AMessage
+    [ProtoInclude(10003, typeof(Response_RankList))]
+    public abstract class AActorMessage : AMessage
 	{
 	}
 
@@ -33,7 +35,7 @@ namespace Model
 	[ProtoContract]
 	[ProtoInclude(30000, typeof(Frame_ClickMap))]
 	[BsonKnownTypes(typeof(Frame_ClickMap))]
-    [ProtoInclude(30000, typeof(Frame_ClickAction))]
+    [ProtoInclude(30001, typeof(Frame_ClickAction))]
     [BsonKnownTypes(typeof(Frame_ClickAction))]
     public abstract class AFrameMessage : AActorMessage
 	{

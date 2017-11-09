@@ -13,6 +13,18 @@ using System.Collections.Generic;using MongoDB.Bson.Serialization.Attributes;
     {
         public long RoomId;
         public int Count;
+    }    [Message(Opcode.G2M_GetRoomList)]
+    [BsonIgnoreExtraElements]
+    public class G2M_GetRoomList : ARequest
+    {
+    }
+
+
+    [Message(Opcode.M2G_GetRoomList)]
+    [BsonIgnoreExtraElements]
+    public class M2G_GetRoomList : AResponse
+    {
+        public long[] RoomIds;
     }    [Message(Opcode.G2M_JoinMatchRoom)]
     [BsonIgnoreExtraElements]
     public class G2M_JoinMatchRoom : ARequest
