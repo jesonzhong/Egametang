@@ -131,9 +131,8 @@ namespace Model
         public long[] UnitIds;
         public FrameMessage AgoFrameMessage;
     }
-    
-
-	public class UnitInfo
+    [ProtoContract]
+    public class UnitInfo
 	{
 		[ProtoMember(1)]
 		public long UnitId;
@@ -143,14 +142,14 @@ namespace Model
 		public int Z;
 	}
 
-	[ProtoContract]
-	[Message(Opcode.Actor_CreateUnits)]
+    [ProtoContract]
+    [Message(Opcode.Actor_CreateUnits)]
 	public class Actor_CreateUnits : AActorMessage
 	{
 		[ProtoMember(1)]
 		public List<UnitInfo> Units = new List<UnitInfo>();
 	}
-
+    [ProtoContract]
     public class RankInfo
     {
         [ProtoMember(1)]
@@ -163,18 +162,13 @@ namespace Model
 
     [ProtoContract]
     [Message(Opcode.Response_RankList)]
+    [ProtoInclude(1000001, typeof(RankInfo))]
     public class Response_RankList : AActorMessage
     {
         [ProtoMember(1)]
         public List<RankInfo> Units = new List<RankInfo>();
     }
-
-    public struct FrameMessageInfo
-	{
-		public long Id;
-		public AMessage Message;
-	}
-
+    
 	[ProtoContract]
 	[Message(Opcode.FrameMessage)]
 	public class FrameMessage : AActorMessage

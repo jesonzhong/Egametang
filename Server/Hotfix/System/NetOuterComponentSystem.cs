@@ -26,7 +26,7 @@ namespace Hotfix
 		public static void Awake(this NetOuterComponent self)
 		{
 			self.Awake(NetworkProtocol.TCP);
-			self.MessagePacker = new MongoPacker();
+            self.MessagePacker = new MongoPacker();
 			self.MessageDispatcher = new OuterMessageDispatcher();
 		}
 
@@ -34,7 +34,7 @@ namespace Hotfix
 		{
 			self.Awake(NetworkProtocol.TCP, host, port);
 			self.MessagePacker = new MongoPacker();
-			self.MessageDispatcher = new OuterMessageDispatcher();
+            self.MessageDispatcher = new OuterMessageDispatcher();
 		}
 
 		public static void Update(this NetOuterComponent self)

@@ -34,7 +34,7 @@ namespace Hotfix
 		{
 			self.Awake(NetworkProtocol.TCP, host, port);
 			self.MessagePacker = new MongoPacker();
-			self.MessageDispatcher = new InnerMessageDispatcher();
+            self.MessageDispatcher = new InnerMessageDispatcher();
 		}
 
 		public static void Update(this NetInnerComponent self)

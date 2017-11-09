@@ -3,10 +3,14 @@ using ProtoBuf;
 
 namespace Model
 {
-	[BsonKnownTypes(typeof(ARequest))]
+    [ProtoContract]
+    [BsonKnownTypes(typeof(ARequest))]
 	[BsonKnownTypes(typeof(AResponse))]
 	[BsonKnownTypes(typeof(AActorMessage))]
-	public abstract class AMessage
+    [ProtoInclude(10000, typeof(ARequest))]
+    [ProtoInclude(10001, typeof(AResponse))]
+    [ProtoInclude(10002, typeof(AActorMessage))]
+    public abstract class AMessage
 	{
 	}
 
