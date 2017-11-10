@@ -9,7 +9,11 @@ namespace Model
 		{
 			//获取本地的IP地址
 			List<string> addressIPs = new List<string>();
-			foreach (IPAddress address in Dns.GetHostEntry(Dns.GetHostName()).AddressList)
+            string hostname = Dns.GetHostName();
+            IPHostEntry hostEntry = Dns.GetHostEntry(hostname);
+            IPAddress[] ips = hostEntry.AddressList;
+
+            foreach (IPAddress address in ips)
 			{
 				if (address.AddressFamily.ToString() == "InterNetwork")
 				{
