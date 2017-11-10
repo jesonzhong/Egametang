@@ -36,7 +36,7 @@ namespace App
 				LogManager.Configuration.Variables["appTypeFormat"] = $"{startConfig.AppType,-8}";
 				LogManager.Configuration.Variables["appIdFormat"] = $"{startConfig.AppId:D3}";
 
-				Log.Info("server start........................");
+				Log.Info("server start............start....start................");
 
 				Game.Scene.AddComponent<OpcodeTypeComponent>();
 				Game.Scene.AddComponent<MessageDispatherComponent>();
