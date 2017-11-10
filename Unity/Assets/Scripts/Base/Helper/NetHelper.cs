@@ -9,7 +9,9 @@ namespace Model
 		{
 			//获取本地的IP地址
 			List<string> addressIPs = new List<string>();
+            Log.Info("GetAddressIPs addressIPs :" + addressIPs.Count);
             string hostname = Dns.GetHostName();
+            Log.Info("GetAddressIPs hostname :" + hostname);
             IPHostEntry hostEntry = Dns.GetHostEntry(hostname);
             IPAddress[] ips = hostEntry.AddressList;
 
