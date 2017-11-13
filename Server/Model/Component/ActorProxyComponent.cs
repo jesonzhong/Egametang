@@ -20,7 +20,12 @@ namespace Model
 
         public void Remove(long id)
         {
-            dictionary.Remove(id);
+            ActorProxy ap;
+            if (dictionary.TryGetValue(id, out ap))
+            {
+                //ap.Dispose();
+                dictionary.Remove(id);
+            }
         }
 	}
 }

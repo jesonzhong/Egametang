@@ -20,17 +20,17 @@ namespace Model
 
 		public void Start()
 		{
-			string[] ips = NetHelper.GetAddressIPs();
+			//string[] ips = NetHelper.GetAddressIPs();
 			StartConfig[] startConfigs = Game.Scene.GetComponent<StartConfigComponent>().GetAll();
 			
 			foreach (StartConfig startConfig in startConfigs)
 			{
-				if (!ips.Contains(startConfig.ServerIP) && startConfig.ServerIP != "*")
-				{
-					continue;
-				}
+                //if (!ips.Contains(startConfig.ServerIP) && startConfig.ServerIP != "*")
+                //{
+                    //continue;
+                //}
 
-				if (startConfig.AppType.Is(AppType.Manager))
+                if (startConfig.AppType.Is(AppType.Manager))
 				{
 					continue;
 				}

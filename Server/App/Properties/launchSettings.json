@@ -2,7 +2,7 @@
   "profiles": {
     "Server.App": {
       "commandName": "Project",
-      "commandLineArgs": "--appId=1 --appType=Manager --config=../Config/StartConfig/LocalAllServer.txt",
+      "commandLineArgs": "--appId=1 --appType=Manager --config=../Config/StartConfig/192.168.93.212.txt",
       "workingDirectory": "../../netcoreapp2.0"
     }
   }

@@ -56,8 +56,12 @@ namespace Model
             ActorProxyComponent actorProxyComponent = Game.Scene.GetComponent<ActorProxyComponent>();
             foreach (Unit unit in units)
             {
-                long gateSessionId = unit.GetComponent<UnitGateComponent>().GateSessionId;
-                actorProxyComponent.Get(gateSessionId).Send(message);
+                UnitGateComponent ugComponent = unit.GetComponent<UnitGateComponent>();
+                if (ugComponent != null)
+                {
+                    long gateSessionId = ugComponent.GateSessionId;
+                    actorProxyComponent.Get(gateSessionId).Send(message);
+                }
             }
         }
         
