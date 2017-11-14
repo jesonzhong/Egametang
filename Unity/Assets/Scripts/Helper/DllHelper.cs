@@ -27,7 +27,7 @@ namespace Model
 #else
 		public static Assembly LoadHotfixAssembly()
 		{
-#if UNITY_EDITOR
+#if true//UNITY_EDITOR
             GameObject code = (GameObject)Resources.Load("Code");
             byte[] assBytes = code.Get<TextAsset>("Hotfix.dll").bytes;
             byte[] mdbBytes = code.Get<TextAsset>("Hotfix.mdb").bytes;

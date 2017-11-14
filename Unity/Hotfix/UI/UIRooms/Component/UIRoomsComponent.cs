@@ -70,7 +70,7 @@ namespace Hotfix
                 Text text = button.transform.Find("Text").GetComponent<Text>();
                 text.text = g2CGetRoomList.RoomIds[i].ToString();
                 
-                button.onClick.AddListener(() =>
+                button.onClick.Add(() =>
                 {
                     this.OnClickAddRoom(button.gameObject);
                 });

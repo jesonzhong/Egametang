@@ -33,8 +33,9 @@ namespace Hotfix
 			Session session = null;
 			try
 			{
-				session = Hotfix.Scene.ModelScene.GetComponent<NetOuterComponent>().Create("122.11.58.163:10304");//.Create("192.168.93.61:10002");
-				string text = this.account.GetComponent<InputField>().text;
+                //session = Hotfix.Scene.ModelScene.GetComponent<NetOuterComponent>().Create("122.11.58.163:10304");
+                session = Hotfix.Scene.ModelScene.GetComponent<NetOuterComponent>().Create("192.168.93.212:10304");
+                string text = this.account.GetComponent<InputField>().text;
 				R2C_Login r2CLogin = await session.Call<R2C_Login>(new C2R_Login() { Account = text, Password = "111111" });
 				Session gateSession = Hotfix.Scene.ModelScene.GetComponent<NetOuterComponent>().Create(r2CLogin.Address);
 				Game.Scene.AddComponent<SessionComponent>().Session = gateSession;

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.IO;
 using System;
+using System.Text;
 
 public class GameVersion
 {
@@ -90,8 +91,9 @@ public class VersionManager
             byte[] content = File.ReadAllBytes(Application.streamingAssetsPath + "/version.txt");
 
             string ver = System.Text.Encoding.UTF8.GetString(content);
-
+            //StreamReader sr = new StreamReader(Application.streamingAssetsPath + "/version.txt",Encoding.Default);
             _instance.curVersion = ver;
+            //sr.Close();
 
 #endif
 
@@ -114,7 +116,7 @@ public class VersionManager
 
 #if UNITY_EDITOR
             
-            saveVersion(Application.streamingAssetsPath + "/version.txt");
+            //saveVersion(Application.streamingAssetsPath + "/version.txt");
 #else
             saveVersion(Application.persistentDataPath + "/version.txt");
 #endif
