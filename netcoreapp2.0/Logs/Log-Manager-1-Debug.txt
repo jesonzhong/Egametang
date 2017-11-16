@@ -1,18 +1,17 @@
-2017-11-09 17:59:09.2057 Manager  001 (Program.cs:39) server start........................
-2017-11-09 17:59:09.4497 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=2 --appType=Location --config=../Config/StartConfig/192.168.93.212.txt
-2017-11-09 17:59:09.5857 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=3 --appType=Realm --config=../Config/StartConfig/192.168.93.212.txt
-2017-11-09 17:59:09.6197 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=4 --appType=Gate --config=../Config/StartConfig/192.168.93.212.txt
-2017-11-09 17:59:09.6667 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=5 --appType=Gate --config=../Config/StartConfig/192.168.93.212.txt
-2017-11-09 17:59:09.7407 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=6 --appType=Gate --config=../Config/StartConfig/192.168.93.212.txt
-2017-11-09 17:59:09.8087 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=7 --appType=Gate --config=../Config/StartConfig/192.168.93.212.txt
-2017-11-09 17:59:09.9507 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=8 --appType=Map --config=../Config/StartConfig/192.168.93.212.txt
-2017-11-09 17:59:10.6477 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=9 --appType=Map --config=../Config/StartConfig/192.168.93.212.txt
-2017-11-09 17:59:15.9667 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=9 --appType=Map --config=../Config/StartConfig/192.168.93.212.txt
-2017-11-09 17:59:20.9967 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=2 --appType=Location --config=../Config/StartConfig/192.168.93.212.txt
-2017-11-09 17:59:21.0417 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=3 --appType=Realm --config=../Config/StartConfig/192.168.93.212.txt
-2017-11-09 17:59:21.0767 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=4 --appType=Gate --config=../Config/StartConfig/192.168.93.212.txt
-2017-11-09 17:59:21.1417 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=5 --appType=Gate --config=../Config/StartConfig/192.168.93.212.txt
-2017-11-09 17:59:21.2097 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=6 --appType=Gate --config=../Config/StartConfig/192.168.93.212.txt
-2017-11-09 17:59:21.3047 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=7 --appType=Gate --config=../Config/StartConfig/192.168.93.212.txt
-2017-11-09 17:59:21.4227 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=8 --appType=Map --config=../Config/StartConfig/192.168.93.212.txt
-2017-11-09 17:59:22.0307 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=9 --appType=Map --config=../Config/StartConfig/192.168.93.212.txt
+2017-11-15 10:47:29.7710 Manager  001 (Program.cs:39) server start............start....start................
+2017-11-15 10:47:29.9475 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=2 --appType=Location --config=../Config/StartConfig/192.168.93.212.txt
+2017-11-15 10:47:30.2113 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=3 --appType=Realm --config=../Config/StartConfig/192.168.93.212.txt
+2017-11-15 10:47:30.2925 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=4 --appType=Gate --config=../Config/StartConfig/192.168.93.212.txt
+2017-11-15 10:47:30.3838 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=5 --appType=Gate --config=../Config/StartConfig/192.168.93.212.txt
+2017-11-15 10:47:30.6255 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=6 --appType=Gate --config=../Config/StartConfig/192.168.93.212.txt
+2017-11-15 10:47:30.6756 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=7 --appType=Gate --config=../Config/StartConfig/192.168.93.212.txt
+2017-11-15 10:47:31.1239 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=8 --appType=Map --config=../Config/StartConfig/192.168.93.212.txt
+2017-11-15 10:47:31.6434 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=9 --appType=Map --config=../Config/StartConfig/192.168.93.212.txt
+2017-11-15 10:47:52.6382 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=2 --appType=Location --config=../Config/StartConfig/192.168.93.212.txt
+2017-11-15 10:47:52.6723 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=3 --appType=Realm --config=../Config/StartConfig/192.168.93.212.txt
+2017-11-15 10:47:52.7264 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=4 --appType=Gate --config=../Config/StartConfig/192.168.93.212.txt
+2017-11-15 10:47:52.8387 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=5 --appType=Gate --config=../Config/StartConfig/192.168.93.212.txt
+2017-11-15 10:47:52.8959 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=6 --appType=Gate --config=../Config/StartConfig/192.168.93.212.txt
+2017-11-15 10:47:52.9611 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=7 --appType=Gate --config=../Config/StartConfig/192.168.93.212.txt
+2017-11-15 10:47:53.1145 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=8 --appType=Map --config=../Config/StartConfig/192.168.93.212.txt
+2017-11-15 10:47:53.2319 Manager  001 (AppManagerComponent.cs:58) dotnet App.dll --appId=9 --appType=Map --config=../Config/StartConfig/192.168.93.212.txt

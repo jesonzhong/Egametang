@@ -480,14 +480,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.08823532, g: 0.04282008, b: 0.04282008, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 96ca8cd007f4d394db38180d468aa65e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 024ca543e2cf5f24eb9d71e05cf234ef, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

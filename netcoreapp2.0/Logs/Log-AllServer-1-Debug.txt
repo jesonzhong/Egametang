@@ -1,5 +1,45 @@
-2017-11-09 17:22:44.3657 AllServer 001 (Program.cs:39) server start........................
-2017-11-09 17:22:44.6197 AllServer 001 (ActorMessageDispatherComponent.cs:36) apptype: AllServer
-2017-11-10 17:48:00.6357 AllServer 001 (Program.cs:39) server start........................
-2017-11-10 17:48:00.8487 AllServer 001 (ActorMessageDispatherComponent.cs:36) apptype: AllServer
-2017-11-10 17:48:16.7017 AllServer 001 (LocationComponent.cs:104) location add key: 6865 appid: 1
+2017-11-14 18:26:42.8097 AllServer 001 (Program.cs:39) server start............start....start................
+2017-11-14 18:26:42.9947 AllServer 001 (ActorMessageDispatherComponent.cs:36) apptype: AllServer
+2017-11-14 18:29:48.7277 AllServer 001 (Program.cs:39) server start............start....start................
+2017-11-14 18:29:48.9537 AllServer 001 (ActorMessageDispatherComponent.cs:36) apptype: AllServer
+2017-11-14 18:29:59.6217 AllServer 001 (C2R_LoginHandler.cs:24) gate address: { "_t" : "StartConfig", "_id" : NumberLong("98547768819754"), "components" : [{ "_t" : "OuterConfig", "Host" : "192.168.93.212", "Port" : 10304 }, { "_t" : "InnerConfig", "Host" : "127.0.0.1", "Port" : 21200 }, { "_t" : "HttpConfig", "Url" : "", "AppId" : 0, "AppKey" : "", "ManagerSystemUrl" : "" }, { "_t" : "DBConfig", "ConnectionString" : null, "DBName" : null }], "AppId" : 1, "AppType" : "AllServer", "ServerIP" : "*" }
+2017-11-14 18:29:59.7557 AllServer 001 (LocationComponent.cs:104) location add key: 5072 appid: 1
+2017-11-14 18:30:00.9287 AllServer 001 (C2G_EnterMapHandler.cs:14) { "_t" : "C2G_EnterMap", "RpcId" : 3 }
+2017-11-14 18:30:00.9507 AllServer 001 (AMRpcHandler.cs:9) System.Exception: not found startconfig: 8 ---> System.Collections.Generic.KeyNotFoundException: The given key was not present in the dictionary.
+   at System.ThrowHelper.ThrowKeyNotFoundException()
+   at System.Collections.Generic.Dictionary`2.get_Item(TKey key)
+   at Model.StartConfigComponent.Get(Int32 id) in E:\Egametang\Server\Model\Component\StartConfigComponent.cs:line 90
+   --- End of inner exception stack trace ---
+   at Model.StartConfigComponent.Get(Int32 id) in E:\Egametang\Server\Model\Component\StartConfigComponent.cs:line 94
+   at Hotfix.C2G_EnterMapHandler.<Run>d__0.MoveNext() in E:\Egametang\Server\Hotfix\Handler\C2G_EnterMapHandler.cs:line 17
+2017-11-15 10:30:25.7828 AllServer 001 (Program.cs:39) server start............start....start................
+2017-11-15 10:30:25.8858 AllServer 001 (Program.cs:97) System.Exception: 127.0.0.1 21200 ---> System.TypeInitializationException: The type initializer for 'Model.UPoller' threw an exception. ---> System.DllNotFoundException: Unable to load DLL 'ENet': 找不到指定的模块。 (Exception from HRESULT: 0x8007007E)
+   at Model.NativeMethods.enet_initialize()
+   at Model.Library.Initialize() in E:\Egametang\Unity\Assets\Scripts\Base\Network\UNet\Library.cs:line 9
+   at Model.UPoller..cctor() in E:\Egametang\Unity\Assets\Scripts\Base\Network\UNet\UPoller.cs:line 10
+   --- End of inner exception stack trace ---
+   at Model.UPoller..ctor(String hostName, UInt16 port) in E:\Egametang\Unity\Assets\Scripts\Base\Network\UNet\UPoller.cs:line 14
+   at Model.UService..ctor(String host, Int32 port) in E:\Egametang\Unity\Assets\Scripts\Base\Network\UNet\UService.cs:line 18
+   at Model.NetworkComponent.Awake(NetworkProtocol protocol, String host, Int32 port) in E:\Egametang\Unity\Assets\Scripts\Component\NetworkComponent.cs:line 43
+   --- End of inner exception stack trace ---
+   at Model.NetworkComponent.Awake(NetworkProtocol protocol, String host, Int32 port) in E:\Egametang\Unity\Assets\Scripts\Component\NetworkComponent.cs:line 53
+   at Hotfix.NetInnerComponentSystem.Awake(NetInnerComponent self, String host, Int32 port) in E:\Egametang\Server\Hotfix\System\NetInnerComponentSystem.cs:line 35
+   at Hotfix.NetInnerComponentEvent.Awake(String a, Int32 b) in E:\Egametang\Server\Hotfix\System\NetInnerComponentSystem.cs:line 15
+   at Model.ObjectEvents.Awake[P1,P2](Disposer disposer, P1 p1, P2 p2) in E:\Egametang\Server\Model\Base\Object\ObjectEvents.cs:line 164
+   at Model.ComponentFactory.Create[T,A,B](Entity entity, A a, B b) in E:\Egametang\Unity\Assets\Scripts\Base\Object\ComponentFactory.cs:line 25
+   at Model.Entity.AddComponent[K,P1,P2](P1 p1, P2 p2) in E:\Egametang\Unity\Assets\Scripts\Base\Object\Entity.cs:line 101
+   at App.Program.Main(String[] args) in E:\Egametang\Server\App\Program.cs:line 97
+2017-11-15 10:31:15.7947 AllServer 001 (Program.cs:39) server start............start....start................
+2017-11-15 10:31:15.9287 AllServer 001 (ActorMessageDispatherComponent.cs:36) apptype: AllServer
+2017-11-15 10:37:04.4974 AllServer 001 (Program.cs:39) server start............start....start................
+2017-11-15 10:37:04.6624 AllServer 001 (ActorMessageDispatherComponent.cs:36) apptype: AllServer
+2017-11-15 10:42:50.2172 AllServer 001 (Program.cs:39) server start............start....start................
+2017-11-15 10:42:50.3212 AllServer 001 (ActorMessageDispatherComponent.cs:36) apptype: AllServer
+2017-11-15 10:46:20.3857 AllServer 001 (Program.cs:39) server start............start....start................
+2017-11-15 10:46:20.6173 AllServer 001 (ActorMessageDispatherComponent.cs:36) apptype: AllServer
+2017-11-15 10:48:56.3198 AllServer 001 (Program.cs:39) server start............start....start................
+2017-11-15 10:48:56.4823 AllServer 001 (ActorMessageDispatherComponent.cs:36) apptype: AllServer
+2017-11-15 11:33:09.3844 AllServer 001 (Program.cs:39) server start............start....start................
+2017-11-15 11:33:09.5694 AllServer 001 (ActorMessageDispatherComponent.cs:36) apptype: AllServer
+2017-11-15 11:33:20.8594 AllServer 001 (C2R_LoginHandler.cs:24) gate address: { "_t" : "StartConfig", "_id" : NumberLong("98547768819754"), "components" : [{ "_t" : "OuterConfig", "Host" : "192.168.93.212", "Port" : 10304 }, { "_t" : "InnerConfig", "Host" : "127.0.0.1", "Port" : 21200 }, { "_t" : "HttpConfig", "Url" : "", "AppId" : 0, "AppKey" : "", "ManagerSystemUrl" : "" }, { "_t" : "DBConfig", "ConnectionString" : null, "DBName" : null }], "AppId" : 1, "AppType" : "AllServer", "ServerIP" : "*" }
+2017-11-15 11:33:21.5574 AllServer 001 (LocationComponent.cs:104) location add key: 6544 appid: 1

@@ -1,17 +1,4 @@
-2017-11-09 17:21:29.4977   (Program.cs:24) System.IO.DirectoryNotFoundException: Could not find a part of the path 'E:\Egametang\netcoreapp2.0\Config\StartConfig\LocalAllServer.txt'.
-   at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
-   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
-   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
-   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks)
-   at System.IO.File.InternalReadAllText(String path, Encoding encoding)
-   at System.IO.File.ReadAllText(String path)
-   at Model.StartConfigComponent.Awake(String path, Int32 appId) in E:\Egametang\Server\Model\Component\StartConfigComponent.cs:line 39
-   at Model.StartConfigComponentEvent.Awake(String a, Int32 b) in E:\Egametang\Server\Model\Component\StartConfigComponent.cs:line 13
-   at Model.ObjectEvents.Awake[P1,P2](Disposer disposer, P1 p1, P2 p2) in E:\Egametang\Server\Model\Base\Object\ObjectEvents.cs:line 164
-   at Model.ComponentFactory.Create[T,A,B](Entity entity, A a, B b) in E:\Egametang\Unity\Assets\Scripts\Base\Object\ComponentFactory.cs:line 25
-   at Model.Entity.AddComponent[K,P1,P2](P1 p1, P2 p2) in E:\Egametang\Unity\Assets\Scripts\Base\Object\Entity.cs:line 101
-   at App.Program.Main(String[] args) in E:\Egametang\Server\App\Program.cs:line 24
-2017-11-09 17:22:24.3147   (Program.cs:24) System.IO.DirectoryNotFoundException: Could not find a part of the path 'E:\Egametang\netcoreapp2.0\Config\StartConfig\LocalAllServer.txt'.
+2017-11-14 18:26:01.2347   (Program.cs:24) System.IO.DirectoryNotFoundException: Could not find a part of the path 'E:\Egametang\netcoreapp2.0\Config\StartConfig\LocalAllServer.txt'.
    at System.IO.FileStream.OpenHandle(FileMode mode, FileShare share, FileOptions options)
    at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
    at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
