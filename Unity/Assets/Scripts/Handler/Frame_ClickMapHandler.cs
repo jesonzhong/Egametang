@@ -10,7 +10,7 @@ namespace Model
 			Unit unit = Game.Scene.GetComponent<UnitComponent>().Get(message.Id);
 			MoveComponent moveComponent = unit.GetComponent<MoveComponent>();
 			Vector3 dir = new Vector3(message.X / 1000f,0,message.Z / 1000f);
-			moveComponent.MoveToDir(dir, 10);
+			moveComponent.MoveToDir(dir, 12);
 
 			CameraComponent camComponent = Game.Scene.GetComponent<CameraComponent>();
 			camComponent.UpdatePosition();

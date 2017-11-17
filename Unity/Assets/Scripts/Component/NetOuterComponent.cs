@@ -23,14 +23,14 @@
 	{
 		public void Awake()
 		{
-			this.Awake(NetworkProtocol.UDP);
+			this.Awake(NetworkProtocol.TCP);
 			this.MessagePacker = new MongoPacker();
 			this.MessageDispatcher = new ClientDispatcher();
 		}
 
 		public void Awake(string host, int port)
 		{
-			this.Awake(NetworkProtocol.UDP, host, port);
+			this.Awake(NetworkProtocol.TCP, host, port);
 			this.MessagePacker = new MongoPacker();
 			this.MessageDispatcher = new ClientDispatcher();
 		}
