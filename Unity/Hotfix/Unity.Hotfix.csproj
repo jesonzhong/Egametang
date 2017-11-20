@@ -69,6 +69,7 @@
     <Compile Include="Base\Object\EntityFactory.cs" />
     <Compile Include="Base\Object\EntityType.cs" />
     <Compile Include="Base\Object\IAwake.cs" />
+    <Compile Include="Base\Object\IFrameUpdate.cs" />
     <Compile Include="Base\Object\ILateUpdate.cs" />
     <Compile Include="Base\Object\ILoad.cs" />
     <Compile Include="Base\Object\IUpdate.cs" />

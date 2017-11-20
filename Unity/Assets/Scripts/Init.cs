@@ -19,7 +19,8 @@ namespace Model
 
 		private IStaticMethod start;
 		private IStaticMethod update;
-		private IStaticMethod lateUpdate;
+        private IStaticMethod frameUpdate;
+        private IStaticMethod lateUpdate;
 		private IStaticMethod onApplicationQuit;
 
 		private void Start()
@@ -46,7 +47,8 @@ namespace Model
 				
 				this.start = new ILStaticMethod("Hotfix.Init", "Start", 0);
 				this.update = new ILStaticMethod("Hotfix.Init", "Update", 0);
-				this.lateUpdate = new ILStaticMethod("Hotfix.Init", "LateUpdate", 0);
+                this.frameUpdate = new ILStaticMethod("Hotfix.Init", "FrameUpdate", 1);
+                this.lateUpdate = new ILStaticMethod("Hotfix.Init", "LateUpdate", 0);
 				this.onApplicationQuit = new ILStaticMethod("Hotfix.Init", "OnApplicationQuit", 0);
 #else
 				Log.Debug("run in mono mode");
@@ -77,66 +79,36 @@ namespace Model
 			}
 		}
 
-		#region Game Frame
-		private float TurnLength = 0.2f; //200 miliseconds
-	
-		private int GameFramesPerLocksetpTurn = 4;
-	
-		private int GameFramesPerSecond = 20;
-	
-		private int GameFrame = 0;
-	
-		private float AccumilatedTime = 0f;
-	
-		private float FrameLength = 0.03f; //22 miliseconds
-	
-		//called once per unity frame
-		public void Update() {
-			//Basically same logic as FixedUpdate, but we can scale it by adjusting FrameLength
-			AccumilatedTime = AccumilatedTime + Time.deltaTime;
-		
-			//in case the FPS is too slow, we may need to update the game multiple times a frame
-			while(AccumilatedTime > FrameLength) {
-				GameFrameTurn ();
-				AccumilatedTime = AccumilatedTime - FrameLength;
-			}
-		}
-	
-		private void GameFrameTurn() {
-			//first frame is used to process actions
-			//if(GameFrame == 0) {
-				//if(LockStepTurn()) {
-					//GameFrame++;
-				//}
-			//} else {
-				//update game
-				//TODO: Add custom physics
-				//SceneManager.Manager.TwoDPhysics.Update (GameFramesPerSecond);
-			
-				/*List<IHasGameFrame> finished = new List<IHasGameFrame>();
-				foreach(IHasGameFrame obj in SceneManager.Manager.GameFrameObjects) {
-					obj.GameFrameTurn(GameFramesPerSecond);
-					if(obj.Finished) {
-						finished.Add (obj);
-					}
-				}
-			
-				foreach(IHasGameFrame obj in finished) {
-					SceneManager.Manager.GameFrameObjects.Remove (obj);
-				}*/
-				
-				this.update.Run();
-				ObjectEvents.Instance.Update();
-			
-				/*GameFrame++;
-				if(GameFrame == GameFramesPerLocksetpTurn) {
-					GameFrame = 0;
-				}*/
-			//}
-		}
-		#endregion
-		
-		private void LateUpdate()
+        private float TurnLength = 0.2f; //200 miliseconds
+
+        private int GameFramesPerLocksetpTurn = 4;
+
+        private int GameFramesPerSecond = 20;
+
+        private int GameFrame = 0;
+
+        private float AccumilatedTime = 0f;
+
+        private float FrameLength = 0.05f; //22 miliseconds
+
+        //called once per unity frame
+        private void Update() {
+            this.update.Run();
+            ObjectEvents.Instance.Update();
+
+            //Basically same logic as FixedUpdate, but we can scale it by adjusting FrameLength
+            AccumilatedTime = AccumilatedTime + Time.deltaTime;
+
+            //in case the FPS is too slow, we may need to update the game multiple times a frame
+            while (AccumilatedTime > FrameLength)
+            {
+                this.frameUpdate.Run(GameFramesPerSecond);
+                ObjectEvents.Instance.FrameUpdate(GameFramesPerSecond);
+                AccumilatedTime = AccumilatedTime - FrameLength;
+            }
+        }
+
+        private void LateUpdate()
 		{
 			this.lateUpdate.Run();
 			ObjectEvents.Instance.LateUpdate();

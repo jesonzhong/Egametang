@@ -8,16 +8,16 @@ using System.Collections;
 namespace Hotfix
 {
 	[ObjectEvent]
-	public class UIBattleMainComponentEvent : ObjectEvent<UIBattleMainComponent>, IAwake,IUpdate
+	public class UIBattleMainComponentEvent : ObjectEvent<UIBattleMainComponent>, IAwake,IFrameUpdate
 	{
 		public void Awake()
 		{
 			this.Get().Awake();
 		}
 
-        public void Update()
+        public void FrameUpdate(int gameFramesPerSecond)
         {
-            this.Get().Update();
+            this.Get().FrameUpdate(gameFramesPerSecond);
         }
 	}
 	
@@ -101,10 +101,10 @@ namespace Hotfix
 
         }
 
-        public void Update()
+        public void FrameUpdate(int gameFramesPerSecond)
         {
-            m_ControlStick.LogicUpdate();
             ProcessMapPos();
+            m_ControlStick.LogicUpdate();
         }
 
         public void PlayAnimation(string actName)

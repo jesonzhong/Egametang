@@ -25,14 +25,14 @@ namespace Hotfix
 	{
 		public static void Awake(this NetInnerComponent self)
 		{
-			self.Awake(NetworkProtocol.UDP);
+			self.Awake(NetworkProtocol.TCP);
 			self.MessagePacker = new MongoPacker();
 			self.MessageDispatcher = new InnerMessageDispatcher();
 		}
 
 		public static void Awake(this NetInnerComponent self, string host, int port)
 		{
-			self.Awake(NetworkProtocol.UDP, host, port);
+			self.Awake(NetworkProtocol.TCP, host, port);
 			self.MessagePacker = new MongoPacker();
             self.MessageDispatcher = new InnerMessageDispatcher();
 		}

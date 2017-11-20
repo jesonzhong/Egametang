@@ -31,7 +31,19 @@ namespace Hotfix
 			}
 		}
 
-		public static void LateUpdate()
+        public static void FrameUpdate(int gameFramesPerSecond)
+        {
+            try
+            {
+                ObjectEvents.Instance.FrameUpdate(gameFramesPerSecond);
+            }
+            catch (Exception e)
+            {
+                Log.Error(e.ToStr());
+            }
+        }
+
+        public static void LateUpdate()
 		{
 			try
 			{

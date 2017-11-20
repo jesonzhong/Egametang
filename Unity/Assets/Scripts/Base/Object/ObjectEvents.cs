@@ -64,7 +64,10 @@ namespace Model
 		private EQueue<Disposer> updates = new EQueue<Disposer>();
 		private EQueue<Disposer> updates2 = new EQueue<Disposer>();
 
-		private readonly EQueue<Disposer> starts = new EQueue<Disposer>();
+        private EQueue<Disposer> frameUpdates = new EQueue<Disposer>();
+        private EQueue<Disposer> frameUpdates2 = new EQueue<Disposer>();
+
+        private readonly EQueue<Disposer> starts = new EQueue<Disposer>();
 
 		private EQueue<Disposer> loaders = new EQueue<Disposer>();
 		private EQueue<Disposer> loaders2 = new EQueue<Disposer>();
@@ -143,6 +146,11 @@ namespace Model
 			{
 				this.updates.Enqueue(disposer);
 			}
+
+            if (objectEvent is IFrameUpdate)
+            {
+                this.frameUpdates.Enqueue(disposer);
+            }
 
 			if (objectEvent is ILateUpdate)
 			{
@@ -314,7 +322,44 @@ namespace Model
 			}
 
 			ObjectHelper.Swap(ref this.updates, ref this.updates2);
-		}
+        }
+
+        public void FrameUpdate(int gameFramesPerSecond)
+        {
+            this.Start();
+            while (this.frameUpdates.Count > 0)
+            {
+                Disposer disposer = this.frameUpdates.Dequeue();
+                if (disposer.Id == 0)
+                {
+                    continue;
+                }
+
+                IObjectEvent objectEvent;
+                if (!this.disposerEvents.TryGetValue(disposer.GetType(), out objectEvent))
+                {
+                    continue;
+                }
+
+                this.frameUpdates2.Enqueue(disposer);
+
+                IFrameUpdate iFrameUpdates = objectEvent as IFrameUpdate;
+                if (iFrameUpdates == null)
+                {
+                    continue;
+                }
+                objectEvent.Set(disposer);
+                try
+                {
+                    iFrameUpdates.FrameUpdate(gameFramesPerSecond);
+                }
+                catch (Exception e)
+                {
+                    Log.Error(e.ToString());
+                }
+            }
+            ObjectHelper.Swap(ref this.frameUpdates, ref this.frameUpdates2);
+        }
 
 		public void LateUpdate()
 		{
