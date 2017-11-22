@@ -49,7 +49,7 @@ namespace Hotfix
                 {
                     response.UnitIds[i] = units[i].Id;
                 }
-                Response_RankList retRankList = new Response_RankList();
+                Actor_RankList retRankList = new Actor_RankList();
                 Actor_CreateUnits actorCreateUnits = new Actor_CreateUnits();
                 int tmpScore = 100;
                 foreach (Unit u in units)

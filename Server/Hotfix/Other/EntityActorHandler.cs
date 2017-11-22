@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Model;
 
 namespace Hotfix
@@ -10,12 +11,21 @@ namespace Hotfix
     {
         public async Task Handle(Session session, Entity entity, ActorRequest message)
         {
-            ((Session)entity).Send(message.AMessage);
-            ActorResponse response = new ActorResponse
-            {
-                RpcId = message.RpcId
-            };
-            session.Reply(response);
+	        ActorResponse response = new ActorResponse { RpcId = message.RpcId };
+
+			try
+	        {
+		        ((Session)entity).Send(message.AMessage);
+		        session.Reply(response);
+		        await Task.CompletedTask;
+	        }
+	        catch (Exception e)
+	        {
+		        response.Error = ErrorCode.ERR_SessionActorError;
+		        response.Message = $"session actor error {e}";
+				session.Reply(response);
+				throw;
+	        }
         }
     }
 
@@ -39,7 +49,7 @@ namespace Hotfix
 				// 客户端发送不需要设置Frame消息的id，在这里统一设置，防止客户端被破解发个假的id过来
 	            aFrameMessage.Id = entity.Id;
                 Unit unit = entity as Unit;
-                
+
                 MatchRoomComponent roomComponent = Game.Scene.GetComponent<MatchRoomComponent>();
                 MatchRoom matchroom = roomComponent.Get(unit.RoomID);
                 if (matchroom != null)
@@ -47,8 +57,8 @@ namespace Hotfix
                     matchroom.Add(aFrameMessage);
                 }
 
-				//Game.Scene.GetComponent<ServerFrameComponent>().Add(aFrameMessage);
-	            ActorResponse response = new ActorResponse
+                //Game.Scene.GetComponent<ServerFrameComponent>().Add(aFrameMessage);
+                ActorResponse response = new ActorResponse
 	            {
 		            RpcId = message.RpcId
 	            };

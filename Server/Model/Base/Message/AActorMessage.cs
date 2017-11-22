@@ -1,45 +1,27 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
-using ProtoBuf;
+﻿using ProtoBuf;
 
+// 不要在这个文件加[ProtoInclude]跟[BsonKnowType]标签,加到InnerMessage.cs或者OuterMessage.cs里面去
 namespace Model
 {
-	[ProtoContract]
-	[BsonKnownTypes(typeof(Actor_Test))]
-	[BsonKnownTypes(typeof(AFrameMessage))]
-	[BsonKnownTypes(typeof(Actor_CreateUnits))]
-	[BsonKnownTypes(typeof(FrameMessage))]
-    [BsonKnownTypes(typeof(Response_RankList))]
-    [ProtoInclude(10000, typeof(FrameMessage))]
-	[ProtoInclude(10001, typeof(AFrameMessage))]
-	[ProtoInclude(10002, typeof(Actor_CreateUnits))]
-    [ProtoInclude(10003, typeof(Response_RankList))]
-    public abstract class AActorMessage : AMessage
-	{
-	}
+    [ProtoContract]
+    public abstract partial class AActorMessage : AMessage
+    {
+    }
 
-	[BsonKnownTypes(typeof(Actor_TestRequest))]
-	[BsonKnownTypes(typeof(Actor_TransferRequest))]
-	public abstract class AActorRequest : ARequest
-	{
-	}
+    [ProtoContract]
+    public abstract partial class AActorRequest : ARequest
+    {
+    }
 
-	[BsonKnownTypes(typeof(Actor_TestResponse))]
-	[BsonKnownTypes(typeof(Actor_TransferResponse))]
-	public abstract class AActorResponse : AResponse
-	{
-	}
+    [ProtoContract]
+    public abstract partial class AActorResponse : AResponse
+    {
+    }
 
-	/// <summary>
-	/// 帧消息，继承这个类的消息会经过服务端转发
-	/// </summary>
-	[ProtoContract]
-	[ProtoInclude(30000, typeof(Frame_ClickMap))]
-	[BsonKnownTypes(typeof(Frame_ClickMap))]
-    [ProtoInclude(30001, typeof(Frame_ClickAction))]
-    [BsonKnownTypes(typeof(Frame_ClickAction))]
-    public abstract class AFrameMessage : AActorMessage
-	{
-		[ProtoMember(1)]
-		public long Id;
-	}
+    [ProtoContract]
+    public abstract partial class AFrameMessage : AActorMessage
+    {
+        [ProtoMember(1)]
+        public long Id;
+    }
 }

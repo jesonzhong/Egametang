@@ -170,7 +170,7 @@ namespace Hotfix
             Log.Debug("OnSkill3");
         }
 
-        public void ProcessRankList(Response_RankList message)
+        public void ProcessRankList(Actor_RankList message)
         {
             int i = 0;
             foreach (RankInfo unitInfo in message.Units)
